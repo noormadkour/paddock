@@ -1,21 +1,19 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import "./Login.css"
-import { createUser, getUserByEmail } from "../../services/userService"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
+import { createUser, getUserByEmail } from "../../services/userService";
 
 export const Register = (props) => {
   const [user, setUser] = useState({
     email: "",
     fullName: "",
-    cohort: 0,
-  })
-  let navigate = useNavigate()
+  });
+  let navigate = useNavigate();
 
   const registerNewUser = () => {
     const newUser = {
       ...user,
-      cohort: parseInt(user.cohort),
-    }
+    };
 
     createUser(newUser).then((createdUser) => {
       if (createdUser.hasOwnProperty("id")) {
@@ -23,33 +21,32 @@ export const Register = (props) => {
           "paddock_user",
           JSON.stringify({
             id: createdUser.id,
-            staff: createdUser.isStaff,
           })
-        )
+        );
 
-        navigate("/")
+        navigate("/");
       }
-    })
-  }
+    });
+  };
 
   const handleRegister = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     getUserByEmail(user.email).then((response) => {
       if (response.length > 0) {
         // Duplicate email. No good.
-        window.alert("Account with that email address already exists")
+        window.alert("Account with that email address already exists");
       } else {
         // Good email, create user.
-        registerNewUser()
+        registerNewUser();
       }
-    })
-  }
+    });
+  };
 
   const updateUser = (evt) => {
-    const copy = { ...user }
-    copy[evt.target.id] = evt.target.value
-    setUser(copy)
-  }
+    const copy = { ...user };
+    copy[evt.target.id] = evt.target.value;
+    setUser(copy);
+  };
 
   return (
     <main className="auth-container">
@@ -83,22 +80,10 @@ export const Register = (props) => {
         </fieldset>
         <fieldset className="auth-fieldset">
           <div>
-            <input
-              onChange={updateUser}
-              type="number"
-              id="cohort"
-              className="auth-form-input"
-              placeholder="Cohort #"
-              required
-            />
-          </div>
-        </fieldset>
-        <fieldset className="auth-fieldset">
-          <div>
             <button type="submit">Register</button>
           </div>
         </fieldset>
       </form>
     </main>
-  )
-}
+  );
+};
