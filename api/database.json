@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fullName" : "Monir Madkour",
+            "email": "noormadkour@gmail.com",
+            "isStaff": true
+        }
+    ]
+}

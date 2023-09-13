@@ -1,5 +1,6 @@
 .auth-container {
   border: 1px solid gray;
+  background-color: red;
   margin: 3rem 15rem;
   padding: 2rem;
   border-radius: 1rem;
