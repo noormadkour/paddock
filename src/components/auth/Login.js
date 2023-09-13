@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-// import "./Login.css"
+import "./Login.css"
 import { getUserByEmail } from "../../services/userService"
 
 export const Login = () => {
@@ -15,9 +15,12 @@ export const Login = () => {
       if (foundUsers.length === 1) {
         const user = foundUsers[0]
         localStorage.setItem(
-          "learning_user",
+          "paddock_user",
           JSON.stringify({
             id: user.id,
+            fullName: user.fullName,
+            email: user.email,
+            isStaff: user.isStaff
           })
         )
 
@@ -32,7 +35,7 @@ export const Login = () => {
     <main className="auth-container">
       <section>
         <form className="auth-form" onSubmit={handleLogin}>
-          <h1 className="header">Learning Moments</h1>
+          <h1 className="header">Welcome to The Paddock</h1>
           <h2>Please sign in</h2>
           <fieldset className="auth-fieldset">
             <div>

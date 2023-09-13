@@ -20,7 +20,7 @@ export const Register = (props) => {
     createUser(newUser).then((createdUser) => {
       if (createdUser.hasOwnProperty("id")) {
         localStorage.setItem(
-          "learning_user",
+          "paddock_user",
           JSON.stringify({
             id: createdUser.id,
             staff: createdUser.isStaff,
@@ -54,7 +54,7 @@ export const Register = (props) => {
   return (
     <main className="auth-container">
       <form className="auth-form" onSubmit={handleRegister}>
-        <h1 className="header">Learning Moments</h1>
+        <h1 className="header">Register to access The Paddock</h1>
         <h2>Please Register</h2>
         <fieldset className="auth-fieldset">
           <div>
