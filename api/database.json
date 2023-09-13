@@ -1,10 +1,21 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "fullName" : "Monir Madkour",
-            "email": "noormadkour@gmail.com",
-            "isStaff": true
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Monir Madkour",
+      "email": "noor@gmail.com",
+      "isStaff": true
+    },
+    {
+      "email": "sydni@gmail.com",
+      "fullName": "Sydni Gause",
+      "cohort": "4",
+      "id": 2
+    },
+    {
+      "email": "spencer@norris.com",
+      "fullName": "Spencer Norris",
+      "id": 3
+    }
+  ]
 }
