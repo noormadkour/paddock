@@ -1,13 +1,13 @@
 import { Routes, Route, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { CircuitList } from "../components/Circuits/CircuitsList";
+import { RacesList } from "../components/Races/RacesList";
 import { ConstructorList } from "../components/Constructors/ConstructorsList";
 import { DriversList } from "../components/Drivers/DriversList";
 import { NavBar } from "../components/Nav/NavBar";
 import { UserProfile } from "../components/User/UserProfile";
 import { Welcome } from "../components/Welcome/Welcome";
 import { ConstructorDetail } from "../components/Constructors/Constructor";
-import { CircuitDetail } from "../components/Circuits/Circuit";
+import { Race } from "../components/Races/Race";
 import { CommentForm, LongEditForm } from "../components/Forms/Forms";
 import { DriverView } from "../components/Drivers/DriverView";
 
@@ -49,9 +49,9 @@ export const ApplicationViews = () => {
           <Route index element={<ConstructorList />} />
           <Route path=":constructorId" element={<ConstructorDetail />} />
         </Route>
-        <Route path="/circuits">
-          <Route index element={<CircuitList />} />
-          <Route path=":circuitId" element={<CircuitDetail />} />
+        <Route path="/races">
+          <Route index element={<RacesList />} />
+          <Route path=":raceId" element={<Race />} />
         </Route>
         <Route
           path="/profile"
