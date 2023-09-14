@@ -1,21 +1,34 @@
 {
   "users": [
     {
-      "id": 1,
       "fullName": "Monir Madkour",
-      "email": "noor@gmail.com",
-      "isStaff": true
+      "email": "noor@email.com",
+      "id": 1
     },
     {
-      "email": "sydni@gmail.com",
       "fullName": "Sydni Gause",
-      "cohort": "4",
+      "email": "sydni@email.com",
       "id": 2
     },
     {
-      "email": "spencer@norris.com",
       "fullName": "Spencer Norris",
+      "email": "spencer@email.com",
       "id": 3
+    },
+    {
+      "fullName": "Nathan",
+      "email": "nathan@email.com",
+      "id": 4
+    },
+    {
+      "fullName": "Michelle P",
+      "email": "michelle@email.com",
+      "id": 5
+    },
+    {
+      "fullName": "Luke Hardy",
+      "email": "luke@email.com",
+      "id": 6
     }
   ]
 }
