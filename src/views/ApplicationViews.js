@@ -6,9 +6,10 @@ import { DriversList } from "../components/Drivers/DriversList";
 import { NavBar } from "../components/Nav/NavBar";
 import { UserProfile } from "../components/User/UserProfile";
 import { Welcome } from "../components/Welcome/Welcome";
-import { DriverDetail } from "../components/Drivers/Driver";
 import { ConstructorDetail } from "../components/Constructors/Constructor";
 import { CircuitDetail } from "../components/Circuits/Circuit";
+import { CommentForm, LongEditForm } from "../components/Forms/Forms";
+import { DriverView } from "../components/Drivers/DriverView";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -31,20 +32,35 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route index element={<Welcome currentUser={currentUser}/>} />
+        <Route index element={<Welcome currentUser={currentUser} />} />
         <Route path="drivers">
           <Route index element={<DriversList />} />
-          <Route path=":driverId" element={<DriverDetail currentUser={currentUser}/>} />
+          <Route
+            path=":driverId"
+            element={
+              <>
+                <DriverView currentUser={currentUser} />
+                <CommentForm />
+              </>
+            }
+          />
         </Route>
         <Route path="/constructors">
           <Route index element={<ConstructorList />} />
           <Route path=":constructorId" element={<ConstructorDetail />} />
-        </Route> 
+        </Route>
         <Route path="/circuits">
           <Route index element={<CircuitList />} />
           <Route path=":circuitId" element={<CircuitDetail />} />
-        </Route> 
-        <Route path="/profile" element={<UserProfile currentUser={currentUser}/>} />
+        </Route>
+        <Route
+          path="/profile"
+          element={<UserProfile currentUser={currentUser} />}
+        />
+        <Route
+          path="/editcomment/:commentId"
+          element={<LongEditForm currentUser={currentUser} />}
+        />
       </Route>
     </Routes>
   );

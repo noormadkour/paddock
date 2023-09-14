@@ -5,8 +5,8 @@ import { createUser, getUserByEmail } from "../../services/userService";
 
 export const Register = (props) => {
   const [user, setUser] = useState({
-    email: "",
     fullName: "",
+    email: "",
   });
   let navigate = useNavigate();
 
@@ -21,6 +21,7 @@ export const Register = (props) => {
           "paddock_user",
           JSON.stringify({
             id: createdUser.id,
+            fullName: createdUser.fullName
           })
         );
 
@@ -63,6 +64,7 @@ export const Register = (props) => {
               placeholder="Enter your name"
               required
               autoFocus
+              autoComplete="off"
             />
           </div>
         </fieldset>
@@ -75,6 +77,7 @@ export const Register = (props) => {
               className="auth-form-input"
               placeholder="Email address"
               required
+              autoComplete="off"
             />
           </div>
         </fieldset>
