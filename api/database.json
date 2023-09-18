@@ -34,6 +34,16 @@
       "fullName": "Monir Madkour",
       "email": "monir@email.com",
       "id": 7
+    },
+    {
+      "fullName": "Val",
+      "email": "val@email.com",
+      "id": 8
+    },
+    {
+      "fullName": "Derek M",
+      "email": "derek@email.com",
+      "id": 9
     }
   ],
   "categories": [
@@ -52,22 +62,103 @@
     {
       "id": 4,
       "category": "Prediction"
+    },
+    {
+      "id": 5,
+      "category": "Answer"
     }
   ],
-  "driverComments":[
+  "driverComments": [
     {
-      "commentId": 1,
+      "id": 1,
       "driverId": "albon",
       "categoryId": 1,
       "userId": 1,
       "commentContent": "I think Alex is one of the most underrated drivers on the grid"
     },
     {
-      "commentId": 2,
+      "id": 2,
       "driverId": "albon",
       "categoryId": 2,
       "userId": 2,
       "commentContent": "I think Alex is one of the worst drivers on the grid"
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 4,
+      "userId": 1,
+      "commentContent": "Alex will win at least one race before he retires",
+      "id": 3
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 3,
+      "userId": 1,
+      "commentContent": "What teams did he race for before?",
+      "id": 4
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 3,
+      "userId": 1,
+      "commentContent": "Is he any good?",
+      "id": 5
+    },
+    {
+      "driverId": "alonso",
+      "categoryId": 1,
+      "userId": 1,
+      "commentContent": "Alonso is one of the best of all time",
+      "id": 6
+    },
+    {
+      "driverId": "alonso",
+      "categoryId": 2,
+      "userId": 1,
+      "commentContent": "He didn't do great this past weekend",
+      "id": 7
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 5,
+      "userId": 9,
+      "commentContent": "No he's garbage",
+      "id": 8
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 1,
+      "userId": 9,
+      "commentContent": "he asight",
+      "id": 9
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 5,
+      "userId": 9,
+      "commentContent": "He good",
+      "id": 10
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 2,
+      "userId": 9,
+      "commentContent": "he sucks",
+      "id": 11
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 4,
+      "userId": 9,
+      "commentContent": "He'll always suck",
+      "id": 12
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 1,
+      "userId": 9,
+      "commentContent": "he has cool hair",
+      "id": 13
     }
   ]
 }

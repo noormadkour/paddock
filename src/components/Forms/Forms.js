@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getDriverById } from "../../services/driverService";
 import { postNewComment, getCategories } from "../../services/commentService";
 
-export const CommentForm = ( {currentUser} ) => {
-  const [driver, setDriver] = useState({});
-  const [driverComment, setDriverComment] = useState("");
-  const [commentCategory, setCommentCategory] = useState(0);
+export const CommentForm = ({ currentUser }) => {
   const [categories, setCategories] = useState([]);
+  const [driver, setDriver] = useState({});
+  const [commentCategory, setCommentCategory] = useState(0);
+  const [driverComment, setDriverComment] = useState("");
 
   const { driverId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getCategories().then((categoryArray) => {
@@ -24,12 +25,23 @@ export const CommentForm = ( {currentUser} ) => {
   }, [driverId]);
 
   const handleNewComment = (event) => {
-    event.preventDefault();
     setDriverComment(event.target.value);
   };
 
   const handleCategorySelect = (event) => {
     setCommentCategory(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const commentObj = {
+      driverId: driver.driverId,
+      categoryId: parseInt(commentCategory),
+      userId: currentUser.id,
+      commentContent: driverComment,
+    };
+    postNewComment(commentObj).then(() => { window.location.reload()});
   };
 
   return (
@@ -42,12 +54,12 @@ export const CommentForm = ( {currentUser} ) => {
             return (
               <div key={category.id}>
                 <label>
-                <input
-                  type="radio"
-                  name="category"
-                  value={category.id}
-                  onChange={handleCategorySelect}
-                />
+                  <input
+                    type="radio"
+                    name="category"
+                    value={category.id}
+                    onChange={handleCategorySelect}
+                  />
                   {category.category}
                 </label>
               </div>
@@ -64,7 +76,7 @@ export const CommentForm = ( {currentUser} ) => {
             onChange={handleNewComment}
           />
         </div>
-        <button>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
       </fieldset>
     </form>
   );
