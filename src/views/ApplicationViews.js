@@ -32,7 +32,7 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route index element={<Welcome currentUser={currentUser} />} />
+        <Route index element={<Welcome currentUser={currentUser} /> } />
         <Route path="drivers">
           <Route index element={<DriversList />} />
           <Route
@@ -40,7 +40,7 @@ export const ApplicationViews = () => {
             element={
               <>
                 <DriverView currentUser={currentUser} />
-                <CommentForm />
+                <CommentForm currentUser={currentUser}/>
               </>
             }
           />
