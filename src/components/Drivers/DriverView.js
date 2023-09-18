@@ -1,24 +1,32 @@
 import { useEffect, useState } from "react";
 import { getDriverById } from "../../services/driverService";
-import { useParams } from "react-router-dom";
-import { deleteComment, getCommentByDriver } from "../../services/commentService";
+import { useNavigate, useParams } from "react-router-dom";
+import { deleteComment, getAllComments } from "../../services/commentService";
+import { CommentForm } from "../Forms/Forms";
 
 export const DriverView = ({ currentUser }) => {
   const [driver, setDriver] = useState({});
   const [driverComments, setDriverComments] = useState([]);
+  const [filteredComments, setFilteredComments] = useState([]);
   const { driverId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getDriverById(driverId).then((driverObj) => {
       setDriver(driverObj);
     });
-    getCommentByDriver(driverId).then((driverCommentsArray) => {
+    getAllComments().then((driverCommentsArray) => {
       setDriverComments(driverCommentsArray);
     });
   }, [driverId]);
 
+  useEffect(() => {
+    setFilteredComments(driverComments.filter(comment => comment.driverId === driverId))
+  }, [driverComments, driverId])
+
+
   const handleDeleteComment = (comment) => {
-    deleteComment(comment)
+    deleteComment(comment).then(() => getAllComments().then((commentsArray) => setDriverComments(commentsArray)))
   }
 
   return (
@@ -41,12 +49,12 @@ export const DriverView = ({ currentUser }) => {
       </div>
       <div className="driver-comments-container">
         <div className="driver-comments-header">Comments: </div>
-        {driverComments.map((comment) => {
+        {filteredComments.map((comment) => {
           return (
             <div className="driver-comment" key={comment.commentId}>
               {comment.commentContent}{" "}
               {currentUser.id === comment.userId ? (
-                <button >Edit</button>
+                <button onClick={() => navigate(`/editcomment/${comment.id}`)}>Edit</button>
               ) : (
                 ""
               )}
@@ -59,6 +67,7 @@ export const DriverView = ({ currentUser }) => {
           );
         })}
       </div>
+      <CommentForm currentUser={currentUser} driverComments={driverComments}/>
     </>
   );
 };

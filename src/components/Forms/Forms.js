@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getDriverById } from "../../services/driverService";
 import { postNewComment, getCategories } from "../../services/commentService";
 
-export const CommentForm = ({ currentUser }) => {
+export const CommentForm = ({ currentUser, driverComments }) => {
   const [categories, setCategories] = useState([]);
   const [driver, setDriver] = useState({});
   const [commentCategory, setCommentCategory] = useState(0);
@@ -59,6 +59,7 @@ export const CommentForm = ({ currentUser }) => {
                     name="category"
                     value={category.id}
                     onChange={handleCategorySelect}
+                    required
                   />
                   {category.category}
                 </label>
@@ -74,16 +75,11 @@ export const CommentForm = ({ currentUser }) => {
             type="textarea"
             placeholder="leave a comment"
             onChange={handleNewComment}
+            required
           />
         </div>
         <button onClick={handleSubmit}>Submit</button>
       </fieldset>
     </form>
   );
-};
-
-export const LongEditForm = ({ currentUser }) => {
-  //get comment by ID
-  //filter all comments by currentUser.Id to get all comments
-  return `This is the stand alone form for editing posted comments`;
 };

@@ -6,10 +6,11 @@ import { DriversList } from "../components/Drivers/DriversList";
 import { NavBar } from "../components/Nav/NavBar";
 import { UserProfile } from "../components/User/UserProfile";
 import { Welcome } from "../components/Welcome/Welcome";
-import { ConstructorDetail } from "../components/Constructors/Constructor";
 import { Race } from "../components/Races/Race";
-import { CommentForm, LongEditForm } from "../components/Forms/Forms";
+import { CommentForm } from "../components/Forms/Forms";
+import { LongEditForm } from "../components/Forms/EditForm";
 import { DriverView } from "../components/Drivers/DriverView";
+import { ConstructorView } from "../components/Constructors/ConstructorView";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -40,14 +41,13 @@ export const ApplicationViews = () => {
             element={
               <>
                 <DriverView currentUser={currentUser} />
-                <CommentForm currentUser={currentUser}/>
               </>
             }
           />
         </Route>
         <Route path="/constructors">
           <Route index element={<ConstructorList />} />
-          <Route path=":constructorId" element={<ConstructorDetail />} />
+          <Route path=":constructorId" element={<ConstructorView />} />
         </Route>
         <Route path="/races">
           <Route index element={<RacesList />} />

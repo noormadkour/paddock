@@ -77,32 +77,11 @@
       "commentContent": "I think Alex is one of the most underrated drivers on the grid"
     },
     {
-      "id": 2,
-      "driverId": "albon",
-      "categoryId": 2,
-      "userId": 2,
-      "commentContent": "I think Alex is one of the worst drivers on the grid"
-    },
-    {
       "driverId": "albon",
       "categoryId": 4,
       "userId": 1,
-      "commentContent": "Alex will win at least one race before he retires",
+      "commentContent": "Alex will win always",
       "id": 3
-    },
-    {
-      "driverId": "albon",
-      "categoryId": 3,
-      "userId": 1,
-      "commentContent": "What teams did he race for before?",
-      "id": 4
-    },
-    {
-      "driverId": "albon",
-      "categoryId": 3,
-      "userId": 1,
-      "commentContent": "Is he any good?",
-      "id": 5
     },
     {
       "driverId": "alonso",
@@ -120,13 +99,6 @@
     },
     {
       "driverId": "albon",
-      "categoryId": 5,
-      "userId": 9,
-      "commentContent": "No he's garbage",
-      "id": 8
-    },
-    {
-      "driverId": "albon",
       "categoryId": 1,
       "userId": 9,
       "commentContent": "he asight",
@@ -141,23 +113,23 @@
     },
     {
       "driverId": "albon",
-      "categoryId": 2,
+      "categoryId": 5,
       "userId": 9,
-      "commentContent": "he sucks",
+      "commentContent": "yeah hes good",
       "id": 11
     },
     {
-      "driverId": "albon",
-      "categoryId": 4,
-      "userId": 9,
-      "commentContent": "He'll always suck",
+      "driverId": "alonso",
+      "categoryId": 5,
+      "userId": 1,
+      "commentContent": "Alonso 3",
       "id": 12
     },
     {
-      "driverId": "albon",
+      "driverId": "hamilton",
       "categoryId": 1,
-      "userId": 9,
-      "commentContent": "he has cool hair",
+      "userId": 2,
+      "commentContent": "This guy is a baller",
       "id": 13
     }
   ]
