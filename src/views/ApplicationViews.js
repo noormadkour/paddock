@@ -1,15 +1,16 @@
 import { Routes, Route, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { CircuitList } from "../components/Circuits/CircuitsList";
+import { RacesList } from "../components/Races/RacesList";
 import { ConstructorList } from "../components/Constructors/ConstructorsList";
 import { DriversList } from "../components/Drivers/DriversList";
 import { NavBar } from "../components/Nav/NavBar";
 import { UserProfile } from "../components/User/UserProfile";
 import { Welcome } from "../components/Welcome/Welcome";
-import { ConstructorDetail } from "../components/Constructors/Constructor";
-import { CircuitDetail } from "../components/Circuits/Circuit";
-import { CommentForm, LongEditForm } from "../components/Forms/Forms";
+import { Race } from "../components/Races/Race";
+import { CommentForm } from "../components/Forms/Forms";
+import { LongEditForm } from "../components/Forms/EditForm";
 import { DriverView } from "../components/Drivers/DriverView";
+import { ConstructorView } from "../components/Constructors/ConstructorView";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -32,7 +33,7 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route index element={<Welcome currentUser={currentUser} />} />
+        <Route index element={<Welcome currentUser={currentUser} /> } />
         <Route path="drivers">
           <Route index element={<DriversList />} />
           <Route
@@ -40,18 +41,17 @@ export const ApplicationViews = () => {
             element={
               <>
                 <DriverView currentUser={currentUser} />
-                <CommentForm />
               </>
             }
           />
         </Route>
         <Route path="/constructors">
           <Route index element={<ConstructorList />} />
-          <Route path=":constructorId" element={<ConstructorDetail />} />
+          <Route path=":constructorId" element={<ConstructorView />} />
         </Route>
-        <Route path="/circuits">
-          <Route index element={<CircuitList />} />
-          <Route path=":circuitId" element={<CircuitDetail />} />
+        <Route path="/races">
+          <Route index element={<RacesList />} />
+          <Route path=":raceId" element={<Race />} />
         </Route>
         <Route
           path="/profile"

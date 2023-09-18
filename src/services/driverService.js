@@ -9,3 +9,5 @@ export const getDriverById = (driverId) => {
     .then((response) => response.json())
     .then((data) => data.MRData.DriverTable.Drivers[0]);
 };
+
+
