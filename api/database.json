@@ -106,7 +106,7 @@
       "driverId": "albon",
       "categoryId": 1,
       "userId": 9,
-      "commentContent": "he asight",
+      "commentContent": "hes aight, I guess.",
       "id": 9
     },
     {
@@ -122,13 +122,6 @@
       "userId": 9,
       "commentContent": "yeah hes good",
       "id": 11
-    },
-    {
-      "driverId": "alonso",
-      "categoryId": 5,
-      "userId": 1,
-      "commentContent": "Alonso 3",
-      "id": 12
     },
     {
       "driverId": "hamilton",

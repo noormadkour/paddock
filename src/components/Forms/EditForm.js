@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   editComment,
   getCategories,
@@ -11,6 +11,7 @@ export const LongEditForm = ({ currentUser }) => {
   const { commentId } = useParams();
   const [comment, setComment] = useState({});
   const [categories, setCategories] = useState([]);
+  const navigate = useNavigate()
 
   useEffect(() => {
     getCategories().then((categoryArray) => {
@@ -27,7 +28,7 @@ export const LongEditForm = ({ currentUser }) => {
 
     const commentObj = { ...comment };
     editComment(commentObj).then(() => {
-      window.location.reload();
+      navigate(-1);
     });
   };
 
