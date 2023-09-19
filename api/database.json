@@ -111,17 +111,10 @@
     },
     {
       "driverId": "albon",
-      "categoryId": 5,
+      "categoryId": 1,
       "userId": 9,
-      "commentContent": "He good",
+      "commentContent": "He is good",
       "id": 10
-    },
-    {
-      "driverId": "albon",
-      "categoryId": 5,
-      "userId": 9,
-      "commentContent": "yeah hes good",
-      "id": 11
     },
     {
       "driverId": "hamilton",
