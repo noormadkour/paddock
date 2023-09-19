@@ -3,6 +3,7 @@ import { getDriverById } from "../../services/driverService";
 import { useNavigate, useParams } from "react-router-dom";
 import { deleteComment, getAllComments } from "../../services/commentService";
 import { CommentForm } from "../Forms/Forms";
+import "./Drivers.css";
 
 export const DriverView = ({ currentUser }) => {
   const [driver, setDriver] = useState({});
@@ -21,13 +22,16 @@ export const DriverView = ({ currentUser }) => {
   }, [driverId]);
 
   useEffect(() => {
-    setFilteredComments(driverComments.filter(comment => comment.driverId === driverId))
-  }, [driverComments, driverId])
-
+    setFilteredComments(
+      driverComments.filter((comment) => comment.driverId === driverId)
+    );
+  }, [driverComments, driverId]);
 
   const handleDeleteComment = (comment) => {
-    deleteComment(comment).then(() => getAllComments().then((commentsArray) => setDriverComments(commentsArray)))
-  }
+    deleteComment(comment).then(() =>
+      getAllComments().then((commentsArray) => setDriverComments(commentsArray))
+    );
+  };
 
   return (
     <>
@@ -51,23 +55,35 @@ export const DriverView = ({ currentUser }) => {
         <div className="driver-comments-header">Comments: </div>
         {filteredComments.map((comment) => {
           return (
-            <div className="driver-comment" key={comment.commentId}>
+            <div className="driver-comment" key={comment.id}>
               {comment.commentContent}{" "}
-              {currentUser.id === comment.userId ? (
-                <button onClick={() => navigate(`/editcomment/${comment.id}`)}>Edit</button>
-              ) : (
-                ""
-              )}
-              {currentUser.id === comment.userId ? (
-                <button onClick={() => handleDeleteComment(comment)}>Delete</button>
-              ) : (
-                ""
-              )}
+              <div className="button-div">
+                {currentUser.id === comment.userId ? (
+                  <button
+                    className="edit-button"
+                    onClick={() => navigate(`/editcomment/${comment.id}`)}
+                  >
+                    Edit
+                  </button>
+                ) : (
+                  ""
+                )}
+                {currentUser.id === comment.userId ? (
+                  <button
+                    className="delete-button"
+                    onClick={() => handleDeleteComment(comment)}
+                  >
+                    Delete
+                  </button>
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
           );
         })}
       </div>
-      <CommentForm currentUser={currentUser} driverComments={driverComments}/>
+      <CommentForm currentUser={currentUser} driverComments={driverComments} />
     </>
   );
 };

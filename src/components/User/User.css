@@ -1,0 +1,10 @@
+.button-div {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .edit-button .delete-button {
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 10px;
+  }
