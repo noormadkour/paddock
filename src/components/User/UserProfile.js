@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   deleteComment,
-  getAllComments,
-  getCommentByUserId,
+  getAllComments
 } from "../../services/commentService";
 import { useNavigate } from "react-router-dom";
 import "./User.css";

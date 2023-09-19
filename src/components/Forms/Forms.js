@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getDriverById } from "../../services/driverService";
 import { postNewComment, getCategories } from "../../services/commentService";
 import "./Forms.css";
@@ -11,7 +11,6 @@ export const CommentForm = ({ currentUser }) => {
   const [driverComment, setDriverComment] = useState("");
 
   const { driverId } = useParams();
-  const navigate = useNavigate();
 
   useEffect(() => {
     getCategories().then((categoryArray) => {
@@ -73,14 +72,14 @@ export const CommentForm = ({ currentUser }) => {
           </div>
           <label className="comment-heading">Comment: </label>
           <div className="comment-container">
-            <input
+            <textarea
               className="comment-input"
               key="comment-area"
               name="comment"
-              type="textarea"
               placeholder="leave a comment"
-              onChange={handleNewComment}
               required
+              type="textarea"
+              onChange={handleNewComment}
             />
           </div>
           <div className="comment-button-div">

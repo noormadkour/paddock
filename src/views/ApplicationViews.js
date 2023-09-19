@@ -7,7 +7,6 @@ import { NavBar } from "../components/Nav/NavBar";
 import { UserProfile } from "../components/User/UserProfile";
 import { Welcome } from "../components/Welcome/Welcome";
 import { Race } from "../components/Races/Race";
-import { CommentForm } from "../components/Forms/Forms";
 import { LongEditForm } from "../components/Forms/EditForm";
 import { DriverView } from "../components/Drivers/DriverView";
 import { ConstructorView } from "../components/Constructors/ConstructorView";

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Race } from "./Race";
 
 export const RacesList = () => {
-  const [allRaces, setAllRaces] = useState();
+  const [allRaces, setAllRaces] = useState([]);
 
   useEffect(() => {
     getAllRaces().then((racesArray) => setAllRaces(racesArray));
