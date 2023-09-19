@@ -51,7 +51,7 @@ export const ApplicationViews = () => {
         </Route>
         <Route path="/races">
           <Route index element={<RacesList />} />
-          <Route path=":raceId" element={<Race />} />
+          <Route path=":round" element={<Race />} />
         </Route>
         <Route
           path="/profile"

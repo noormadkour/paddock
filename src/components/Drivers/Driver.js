@@ -1,6 +1,6 @@
 import "./Drivers.css";
 
-export const Driver = ({ driverObj, key }) => {
+export const Driver = ({ driverObj }) => {
 
   return (
     <div className="driver-container" key={driverObj.driverId}>

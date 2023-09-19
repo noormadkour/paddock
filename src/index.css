@@ -59,6 +59,7 @@ input:focus {
 
 /* GLOBAL STYLING FOR ALL THE BUTTONS BUTTONS */
 button {
+  margin: 10px 10px;
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;

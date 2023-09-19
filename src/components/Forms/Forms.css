@@ -1,0 +1,35 @@
+.fieldset-div{
+    background-color: var(--outline);
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.radio-categories {
+    display: flex;
+    margin: 10px;
+}
+
+.category {
+    margin: auto
+}
+
+.comment-input {
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.driver-comment-form {
+    display: flex;
+    justify-content: center;
+}
+
+.comment-button-div{
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    
+}
