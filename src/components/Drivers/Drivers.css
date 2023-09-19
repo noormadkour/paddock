@@ -68,7 +68,7 @@
 
 .button-div {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .edit-button .delete-button {

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { getAllRaces } from "../../services/raceService";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Race } from "./Race";
 
 export const RacesList = () => {
-  const [allRaces, setAllRaces] = useState();
+  const [allRaces, setAllRaces] = useState([]);
+  const navigate = useNavigate()
 
   useEffect(() => {
     getAllRaces().then((racesArray) => setAllRaces(racesArray));
@@ -15,7 +16,7 @@ export const RacesList = () => {
       {allRaces.map((raceObj) => {
         return (
           <Link key={raceObj.round} to={`/races/${raceObj.round}`}>
-            <Race raceObj={raceObj} />
+            <Race raceObj={raceObj} key={raceObj.round}/>
           </Link>
         );
       })}

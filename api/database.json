@@ -49,6 +49,16 @@
       "fullName": "Brooks West",
       "email": "brooks@email.com",
       "id": 10
+    },
+    {
+      "fullName": "Kevin Quail",
+      "email": "kevin@email.com",
+      "id": 11
+    },
+    {
+      "fullName": "Tricia Swift",
+      "email": "tricia@email.com",
+      "id": 12
     }
   ],
   "categories": [
@@ -77,16 +87,9 @@
     {
       "id": 1,
       "driverId": "albon",
-      "categoryId": 1,
+      "categoryId": 2,
       "userId": 1,
-      "commentContent": "I think Alex is one of the most underrated drivers on the grid"
-    },
-    {
-      "driverId": "albon",
-      "categoryId": 4,
-      "userId": 1,
-      "commentContent": "Alex will win always",
-      "id": 3
+      "commentContent": "I think Alex is one of the least underrated drivers on the grid"
     },
     {
       "driverId": "alonso",
@@ -96,39 +99,18 @@
       "id": 6
     },
     {
-      "driverId": "alonso",
-      "categoryId": 2,
-      "userId": 1,
-      "commentContent": "He didn't do great this past weekend",
-      "id": 7
+      "driverId": "albon",
+      "categoryId": 1,
+      "userId": 9,
+      "commentContent": "hes aight, I guess.",
+      "id": 9
     },
     {
       "driverId": "albon",
       "categoryId": 1,
       "userId": 9,
-      "commentContent": "he asight",
-      "id": 9
-    },
-    {
-      "driverId": "albon",
-      "categoryId": 5,
-      "userId": 9,
-      "commentContent": "He good",
+      "commentContent": "He is good",
       "id": 10
-    },
-    {
-      "driverId": "albon",
-      "categoryId": 5,
-      "userId": 9,
-      "commentContent": "yeah hes good",
-      "id": 11
-    },
-    {
-      "driverId": "alonso",
-      "categoryId": 5,
-      "userId": 1,
-      "commentContent": "Alonso 3",
-      "id": 12
     },
     {
       "driverId": "hamilton",
@@ -139,16 +121,16 @@
     },
     {
       "driverId": "albon",
-      "categoryId": 5,
+      "categoryId": 1,
       "userId": 1,
-      "commentContent": "He did alright I guess",
+      "commentContent": "He did alright I guess. Coulda been worse",
       "id": 15
     },
     {
       "driverId": "ocon",
-      "categoryId": 2,
+      "categoryId": 1,
       "userId": 1,
-      "commentContent": "Ocon is the worst",
+      "commentContent": "Ocon is not the worst but not the best",
       "id": 16
     },
     {
@@ -157,6 +139,41 @@
       "userId": 10,
       "commentContent": "Actually he's really good, he just gets shafted by the media",
       "id": 17
+    },
+    {
+      "driverId": "lawson",
+      "categoryId": 1,
+      "userId": 10,
+      "commentContent": "Really showed he was worth an F1 seat at the singapore grand prix",
+      "id": 18
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 3,
+      "userId": 1,
+      "commentContent": "Who did he race for before Williams, was it with RedBull?",
+      "id": 20
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 5,
+      "userId": 9,
+      "commentContent": "Yeah he raced for RedBull before being replaced by Gasly, who was then Replaced by Perez. It's a hot seat that second RedBull seat",
+      "id": 21
+    },
+    {
+      "driverId": "alonso",
+      "categoryId": 3,
+      "userId": 11,
+      "commentContent": "How old is this guy?",
+      "id": 22
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 5,
+      "userId": 1,
+      "commentContent": "He's from Thailand but has an English Race License",
+      "id": 24
     }
   ]
 }

@@ -1,0 +1,38 @@
+.races-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem;
+  }
+  
+  .races-container > * {
+    flex-basis: 25%;
+    margin: 0.5rem;
+  }
+
+  .race-container {
+    background-color: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .race-detail-container {
+    align-content: center;
+    width: 300px;
+    background-color: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .race-info {
+    color: var(--info);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .race-detail-info {
+    color: var(--info);
+    font-family: "Roboto", sans-serif;
+  }
