@@ -27,7 +27,13 @@ export const UserProfile = ({ currentUser }) => {
     );
   };
 
-  return (
+  return (<>
+    <div className="user-info-container">
+      <div className="user-info">
+        <h2>Hey there, {currentUser.fullName}</h2>
+        <p> Here are the comments you've made on various drivers</p>
+      </div>
+    </div>
     <div className="driver-comments-container">
       <div className="driver-comments-header">Comments: </div>
       {userComments.map((comment) => {
@@ -54,5 +60,6 @@ export const UserProfile = ({ currentUser }) => {
         );
       })}
     </div>
+    </>
   );
 };

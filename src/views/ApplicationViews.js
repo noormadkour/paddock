@@ -6,10 +6,10 @@ import { DriversList } from "../components/Drivers/DriversList";
 import { NavBar } from "../components/Nav/NavBar";
 import { UserProfile } from "../components/User/UserProfile";
 import { Welcome } from "../components/Welcome/Welcome";
-import { Race } from "../components/Races/Race";
 import { LongEditForm } from "../components/Forms/EditForm";
 import { DriverView } from "../components/Drivers/DriverView";
 import { ConstructorView } from "../components/Constructors/ConstructorView";
+import { RaceView } from "../components/Races/RaceView";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -50,7 +50,7 @@ export const ApplicationViews = () => {
         </Route>
         <Route path="/races">
           <Route index element={<RacesList />} />
-          <Route path=":round" element={<Race />} />
+          <Route path=":raceRound" element={<RaceView />} />
         </Route>
         <Route
           path="/profile"
