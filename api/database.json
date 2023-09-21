@@ -149,13 +149,6 @@
     },
     {
       "driverId": "albon",
-      "categoryId": 3,
-      "userId": 1,
-      "commentContent": "Who did he race for before Williams, was it with RedBull?",
-      "id": 20
-    },
-    {
-      "driverId": "albon",
       "categoryId": 5,
       "userId": 9,
       "commentContent": "Yeah he raced for RedBull before being replaced by Gasly, who was then Replaced by Perez. It's a hot seat that second RedBull seat",
@@ -170,9 +163,16 @@
     },
     {
       "driverId": "albon",
-      "categoryId": 5,
+      "categoryId": 3,
       "userId": 1,
-      "commentContent": "He's from Thailand but has an English Race License",
+      "commentContent": "Why?",
+      "id": 23
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 1,
+      "userId": 1,
+      "commentContent": "good",
       "id": 24
     }
   ]

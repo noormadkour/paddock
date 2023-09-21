@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { getDriverById } from "../../services/driverService";
-import { postNewComment, getCategories } from "../../services/commentService";
+import {
+  postNewComment,
+  getCategories,
+  getAllComments,
+} from "../../services/commentService";
 import "./Forms.css";
 
-export const CommentForm = ({ currentUser }) => {
+export const CommentForm = ({ setDriverComments, currentUser }) => {
   const [categories, setCategories] = useState([]);
   const [driver, setDriver] = useState({});
   const [commentCategory, setCommentCategory] = useState(0);
   const [driverComment, setDriverComment] = useState("");
+  const navigate = useNavigate();
 
   const { driverId } = useParams();
 
@@ -41,9 +46,7 @@ export const CommentForm = ({ currentUser }) => {
       userId: currentUser.id,
       commentContent: driverComment,
     };
-    postNewComment(commentObj).then(() => {
-      window.location.reload();
-    });
+    postNewComment(commentObj).then(() => {navigate(0)});
   };
 
   return (

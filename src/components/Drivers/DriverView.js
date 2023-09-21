@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getDriverById } from "../../services/driverService";
 import { useNavigate, useParams } from "react-router-dom";
 import { deleteComment, getAllComments } from "../../services/commentService";
-import { CommentForm } from "../Forms/Forms";
+import { CommentForm } from "../Forms";
 import "./Drivers.css";
 
 export const DriverView = ({ currentUser }) => {
@@ -83,7 +83,11 @@ export const DriverView = ({ currentUser }) => {
           );
         })}
       </div>
-      <CommentForm currentUser={currentUser} driverComments={driverComments} />
+      <CommentForm
+        setDriverComments={setDriverComments}
+        currentUser={currentUser}
+        driverComments={driverComments}
+      />
     </>
   );
 };

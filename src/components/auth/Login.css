@@ -1,4 +1,5 @@
 .auth-container {
+  color: white;
   border: 1px solid gray;
   background-color: red;
   margin: 3rem 15rem;
@@ -18,6 +19,7 @@
 
 .auth-form-input {
   padding: 0.25rem;
+  border-radius: 10px;
 }
 
 .register-link {
