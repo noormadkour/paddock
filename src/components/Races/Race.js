@@ -4,18 +4,17 @@ export const Race = ({ raceObj }) => {
   return (
     <div className="race-container" key={raceObj.round}>
       <div>
-        <div className="race-info">Race Name: </div>
-        <div>
+        <h2>
           {raceObj.raceName}
-        </div>
+        </h2>
       </div>
       <div>
-        <div className="race-info">Circuit: </div>
+        <span className="race-info">Circuit: </span>
         <span>{raceObj.Circuit.circuitName}</span>
       </div>
       <div>
-        <div className="race-info">Date: </div>
-        <div>{raceObj.date}</div>
+        <span className="race-info">Date: </span>
+        <span>{raceObj.date}</span>
       </div>
     </div>
   );

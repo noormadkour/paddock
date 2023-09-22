@@ -8,11 +8,18 @@ import {
 } from "../../services/commentService";
 import "./Forms.css";
 
-export const CommentForm = ({ setDriverComments, currentUser }) => {
+export const CommentForm = ({ setDriverComments, currentUser, driver }) => {
   const [categories, setCategories] = useState([]);
-  const [driver, setDriver] = useState({});
+  // const [driver, setDriver] = useState({});
   const [commentCategory, setCommentCategory] = useState(0);
   const [driverComment, setDriverComment] = useState("");
+  const [allCommenets, setAllComments] = useState([]);
+  const [formState, setFormState] = useState({
+    driverId: 0,
+    categoryId: 0,
+    userId: 0,
+    commentContent: "",
+  });
   const navigate = useNavigate();
 
   const { driverId } = useParams();
@@ -23,22 +30,24 @@ export const CommentForm = ({ setDriverComments, currentUser }) => {
     });
   }, []);
 
-  useEffect(() => {
-    getDriverById(driverId).then((driverObj) => {
-      setDriver(driverObj);
-    });
-  }, [driverId]);
+  // useEffect(() => {
+  //   getDriverById(driverId).then((driverObj) => {
+  //     setDriver(driverObj);
+  //   });
+  // }, [driverId]);
 
   const handleNewComment = (event) => {
     setDriverComment(event.target.value);
   };
 
   const handleCategorySelect = (event) => {
-    setCommentCategory(event.target.value);
+    setCommentCategory(parseInt(event.target.value));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    //add if statement evaluating the state of the comments (no zeroes)
 
     const commentObj = {
       driverId: driver.driverId,
@@ -46,11 +55,20 @@ export const CommentForm = ({ setDriverComments, currentUser }) => {
       userId: currentUser.id,
       commentContent: driverComment,
     };
-    postNewComment(commentObj).then(() => {navigate(0)});
+    postNewComment(commentObj)
+      .then(() => {
+        setCommentCategory(0);
+        setDriverComment("");
+      })
+      .then(() => {
+        getAllComments().then((commentArray) => {
+          setDriverComments(commentArray);
+        });
+      });
   };
 
   return (
-    <form className="driver-comment-form">
+    <form className="driver-comment-form" onSubmit={handleSubmit}>
       <div className="fieldset-div">
         <fieldset>
           <h2>Add a comment</h2>
@@ -64,6 +82,7 @@ export const CommentForm = ({ setDriverComments, currentUser }) => {
                       type="radio"
                       name="category"
                       value={category.id}
+                      checked={commentCategory === category.id}
                       onChange={handleCategorySelect}
                       required
                     />
@@ -79,6 +98,7 @@ export const CommentForm = ({ setDriverComments, currentUser }) => {
               className="comment-input"
               key="comment-area"
               name="comment"
+              value={driverComment}
               placeholder="leave a comment"
               required
               type="textarea"
@@ -86,7 +106,7 @@ export const CommentForm = ({ setDriverComments, currentUser }) => {
             />
           </div>
           <div className="comment-button-div">
-            <button className="submit-button" onClick={handleSubmit}>
+            <button type="submit" className="submit-button">
               Submit
             </button>
           </div>

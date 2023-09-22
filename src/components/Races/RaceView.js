@@ -19,20 +19,40 @@ export const RaceView = () => {
 //   }, [allRaces. raceRound]);
 
   return (
-    <div className="race-container">
+    <div className="race-detail-container">
       <div>
-            <div className="race-info">Race Name: </div>
-            <div>
+            <span className="race-info">Race Name: </span>
+            <span>
               {race?.raceName}
-            </div>
+            </span>
           </div>
           <div>
-            <div className="race-info">Circuit: </div>
+            <span className="race-info">Round: </span>
+            <span>{race?.round}</span>
+          </div>
+          <div>
+            <span className="race-info">Circuit: </span>
             <span>{race?.Circuit?.circuitName}</span>
           </div>
           <div>
-            <div className="race-info">Date: </div>
-            <div>{race?.date}</div>
+            <span className="race-info">Date: </span>
+            <span>{race?.date}</span>
+          </div>
+          <div>
+            <span className="race-info">First Practice: </span>
+            <span>{race?.FirstPractice?.date} - {race?.FirstPractice?.time}</span>
+          </div>
+          <div>
+            <span className="race-info">Second Practice: </span>
+            <span>{race?.SecondPractice?.date} - {race?.SecondPractice?.time}</span>
+          </div>
+          <div>
+            <span className="race-info">Third Practice: </span>
+            <span>{race?.ThirdPractice?.date} - {race?.ThirdPractice?.time}</span>
+          </div>
+          <div>
+            <span className="race-info">Qualifying: </span>
+            <span>{race?.Qualifying?.date} - {race?.Qualifying?.time}</span>
           </div>
     </div>
   );

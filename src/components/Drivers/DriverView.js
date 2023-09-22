@@ -108,6 +108,7 @@ export const DriverView = ({ currentUser }) => {
         setDriverComments={setDriverComments}
         currentUser={currentUser}
         driverComments={driverComments}
+        driver={driver}
       />
     </>
   );

@@ -13,13 +13,13 @@
   }
 
   .race-container {
-    margin: 20px;
+    margin: 0px 20px 20px 20px;
     color: var(--offWhite);
     text-shadow: 0px 0px 2px rgb(0, 0, 0);
     background-color: var(--primary);
     border: 1px solid var(--outline);
     border-radius: 0.5rem;
-    padding: 5px 20px 20px 20px;
+    padding: 0px 20px 20px 20px;
     box-shadow: 0px 4px 5px black;
   }
 
@@ -29,18 +29,20 @@
   }
   
   .race-detail-container {
-    align-content: center;
-    width: auto;
-    margin: 30px;
-    background-color: var(--offWhite);
+    margin: 100px 20px 20px 20px;
+    color: var(--offWhite);
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    background-color: var(--primary);
     border: 1px solid var(--outline);
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 0px 20px 20px 20px;
+    box-shadow: 0px 4px 5px black;
   }
   
   .race-info {
     color: var(--offWhite);
     font-family: "Roboto", sans-serif;
+    margin-bottom: 100px;
   }
   
   .race-detail-info {

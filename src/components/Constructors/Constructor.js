@@ -4,8 +4,7 @@ export const Constructor = ({ constructorObj }) => {
     return (
         <div className="constructor-container" key={constructorObj.constructorId}>
           <div>
-            <div className="constructor-info">Name</div>
-            <div>{constructorObj.name}</div>
+            <h2>{constructorObj.name}</h2>
           </div>
           <div>
             <div className="constructor-info">Country of Origin: </div>
