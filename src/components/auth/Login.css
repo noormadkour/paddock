@@ -1,10 +1,16 @@
 .auth-container {
   color: white;
-  border: 1px solid gray;
-  background-color: red;
+  border: 0 0 2px 2px  solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.211);
   margin: 3rem 15rem;
   padding: 2rem;
   border-radius: 1rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+
 }
 
 .header {

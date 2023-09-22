@@ -22,7 +22,7 @@ export const getCommentByUserId = (userId) => {
 };
 
 export const getAllComments = () => {
-  return fetch("http://localhost:8088/driverComments").then(res => res.json())
+  return fetch("http://localhost:8088/driverComments?_expand=user&_expand=category").then(res => res.json())
 }
 
 export const postNewComment = (commentObj) => {

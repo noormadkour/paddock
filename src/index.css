@@ -1,5 +1,7 @@
 /* Import the google web fonts you want to use */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Quicksand&family=Roboto:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 /* FONTS
 font-family: "Nunito", sans-serif;
@@ -10,15 +12,12 @@ font-family: "Roboto", sans-serif;
 /* COLOR PALETTE */
 /* Feel free to change these values and create your own color palette! https://coolors.co/ is a great resource */
 :root {
-  --primary: #ffb400;
-  --secondary: #00a6ed;
-  --info: #7fb800;
-  --warning: #f6511d;
-  --white: #ffffff;
-  --offWhite: #f2f2f3;
-  --dark: #3b3b3b;
-  --outline: #c3c0c0;
-  --appBackground: #414040;
+  --primary: #AD343E;
+  --secondary: #61232A;
+  --tertiary: #C78B8D;
+  --offWhite: #E0E2DB;
+  --outline: #88A096;
+  --appBackground:#141115;
 }
 
 /* GLOBAL STYLES */
@@ -27,12 +26,12 @@ button,
 input,
 select,
 textarea {
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
   background-color: var(--appBackground);
-  margin: 0;
+  position: relative;
 }
 
 h1,
@@ -41,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", serif;
+  font-family: "Montserrat", serif;
 }
 
 /* This prevents all the links in the app from having default underline */
@@ -63,8 +62,16 @@ button {
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
-  color: var(--secondary);
+  color: var(--offWhite);
+  background-color: var(--tertiary);
   cursor: pointer;
+  box-shadow: 1px 1px 2px var(--secondary);
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--offWhite);
+  box-shadow: 1px 1px 1px var(--appBackground);
 }
 
 /* These are all the color options for the buttons */

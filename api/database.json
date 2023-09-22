@@ -120,13 +120,6 @@
       "id": 13
     },
     {
-      "driverId": "albon",
-      "categoryId": 1,
-      "userId": 1,
-      "commentContent": "He did alright I guess. Coulda been worse",
-      "id": 15
-    },
-    {
       "driverId": "ocon",
       "categoryId": 1,
       "userId": 1,
@@ -162,18 +155,11 @@
       "id": 22
     },
     {
-      "driverId": "albon",
-      "categoryId": 3,
-      "userId": 1,
-      "commentContent": "Why?",
-      "id": 23
-    },
-    {
-      "driverId": "albon",
+      "driverId": "alonso",
       "categoryId": 1,
       "userId": 1,
-      "commentContent": "good",
-      "id": 24
+      "commentContent": "Old but amazing\n",
+      "id": 23
     }
   ]
 }

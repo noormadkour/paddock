@@ -15,7 +15,7 @@ export const DriversList = () => {
     <div className="drivers-container">
       {allDrivers.map((driverObj) => {
         return (
-          <Link key={driverObj.driverId} to={`/drivers/${driverObj.driverId}`} >
+          <Link key={driverObj.driverId} to={`/drivers/${driverObj.driverId}`} className="link-style">
             <Driver driverObj={driverObj} />
           </Link>
         );
