@@ -1,3 +1,4 @@
+import { CountdownTimer } from "../Countdown/Countdown";
 import "./Welcome.css";
 
 export const Welcome = ({ currentUser }) => {
@@ -10,6 +11,7 @@ export const Welcome = ({ currentUser }) => {
       <br/>
       <br/>
       <div>Your one-stop shop for all things F1 - but not really this has a very specific task</div>
+      <CountdownTimer />
     </div>
   );
 };
