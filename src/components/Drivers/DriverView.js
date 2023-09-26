@@ -65,7 +65,7 @@ export const DriverView = ({ currentUser }) => {
         <h2 className="driver-comments-header">Comments: </h2>
         {filteredComments.map((comment) => {
           return (
-            <div className="driver-comment" key={comment.id}>
+            <div className={`driver-comment-${comment.categoryId}`} key={comment.id}>
               <div className="driver-comment-metadata">
                 <div className="driver-comment-author">
                   User: {comment?.user?.fullName}
