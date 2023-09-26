@@ -19,7 +19,7 @@ export const getTeamByDriverId = (driverId) => {
 };
 
 export const getDriverImageById = (driverObj) => {
-  return fetch(`http://localhost:8088/drivers?driverId=${driverObj.driverId}`)
+  return fetch(`http://localhost:8088/driversExtraInfo?foreignDriverId=${driverObj.driverId}`)
   .then((response) => response.json())
   .then((driverObj) => driverObj[0])
 } 
