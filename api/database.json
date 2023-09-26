@@ -186,6 +186,13 @@
       "userId": 1,
       "commentContent": "Yeah he's amazing\n",
       "id": 27
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 1,
+      "userId": 1,
+      "commentContent": "test for delete\n",
+      "id": 28
     }
   ],
   "drivers": [
