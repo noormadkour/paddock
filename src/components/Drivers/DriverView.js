@@ -61,43 +61,50 @@ export const DriverView = ({ currentUser }) => {
           </a>
         </div>
       </div>
-      <div className="driver-comments-container">
-        <h2 className="driver-comments-header">Comments: </h2>
-        {filteredComments.map((comment) => {
-          return (
-            <div className={`driver-comment-${comment.category.category}`} key={comment.id}>
-              <div className="driver-comment-metadata">
-                <div className="driver-comment-author">
-                  User: {comment?.user?.fullName}
+      <div className="main-comment-container">
+        <div>
+          <h2 className="driver-comments-header">Comments: </h2>
+        </div>
+        <div className="driver-comments-container">
+          {filteredComments.map((comment) => {
+            return (
+              <div
+                className={`driver-comment-${comment.category.category}`}
+                key={comment.id}
+              >
+                <div className="driver-comment-metadata">
+                  <div className="driver-comment-author">
+                    User: {comment?.user?.fullName}
+                  </div>
+                  <div className="driver-comment-category">
+                    Category: {comment?.category.category}
+                  </div>
                 </div>
-                <div className="driver-comment-category">
-                  Category: {comment?.category.category}
+                <div className="driver-comment-content">
+                  {comment.commentContent}
+                </div>
+                <div className="button-div">
+                  {currentUser.id === comment.userId && (
+                    <button
+                      className="edit-button"
+                      onClick={() => navigate(`/editcomment/${comment.id}`)}
+                    >
+                      Edit
+                    </button>
+                  )}
+                  {currentUser.id === comment.userId && (
+                    <button
+                      className="delete-button"
+                      onClick={() => handleDeleteComment(comment.id)}
+                    >
+                      Delete
+                    </button>
+                  )}
                 </div>
               </div>
-              <div className="driver-comment-content">
-                {comment.commentContent}
-              </div>
-              <div className="button-div">
-                {currentUser.id === comment.userId && (
-                  <button
-                    className="edit-button"
-                    onClick={() => navigate(`/editcomment/${comment.id}`)}
-                  >
-                    Edit
-                  </button>
-                )}
-                {currentUser.id === comment.userId && (
-                  <button
-                    className="delete-button"
-                    onClick={() => handleDeleteComment(comment.id)}
-                  >
-                    Delete
-                  </button>
-                )}
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
       <CommentForm
         setDriverComments={setDriverComments}

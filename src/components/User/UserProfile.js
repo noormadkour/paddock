@@ -21,8 +21,8 @@ export const UserProfile = ({ currentUser }) => {
     );
   }, [allComments, currentUser]);
 
-  const handleDeleteComment = (comment) => {
-    deleteComment(comment).then(() =>
+  const handleDeleteComment = (commentId) => {
+    deleteComment(commentId).then(() =>
       getAllComments().then((commentsArray) => setAllComments(commentsArray))
     );
   };
@@ -38,7 +38,7 @@ export const UserProfile = ({ currentUser }) => {
       <h2 className="driver-comments-header">Comments: </h2>
       {userComments.map((comment) => {
         return (
-          <div className="driver-comment" key={comment.id}>
+          <div className={`driver-comment-${comment.category.category}`} key={comment.id}>
           <div className="driver-comment-metadata">
             <div className="driver-comment-author">
               DriverId: {comment?.driverId}
@@ -60,7 +60,7 @@ export const UserProfile = ({ currentUser }) => {
                 ""
               )}
               {currentUser.id === comment.userId ? (
-                <button className="delete-button" onClick={() => handleDeleteComment(comment)}>
+                <button className="delete-button" onClick={() => handleDeleteComment(comment.id)}>
                   Delete
                 </button>
               ) : (
