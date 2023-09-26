@@ -27,8 +27,8 @@ export const DriverView = ({ currentUser }) => {
     );
   }, [driverComments, driverId]);
 
-  const handleDeleteComment = (comment) => {
-    deleteComment(comment).then(() =>
+  const handleDeleteComment = (commentId) => {
+    deleteComment(commentId).then(() =>
       getAllComments().then((commentsArray) => setDriverComments(commentsArray))
     );
   };
@@ -65,13 +65,15 @@ export const DriverView = ({ currentUser }) => {
         <h2 className="driver-comments-header">Comments: </h2>
         {filteredComments.map((comment) => {
           return (
-            <div className="driver-comment" key={comment.id}>
+            <div
+              key={comment.id}
+              className={`driver-comment-${comment.categoryId}`}
+            >
               <div className="driver-comment-metadata">
                 <div className="driver-comment-author">
                   User: {comment?.user?.fullName}
                 </div>
                 <div className="driver-comment-category">
-                  {" "}
                   Category: {comment?.category.category}
                 </div>
               </div>
@@ -79,25 +81,21 @@ export const DriverView = ({ currentUser }) => {
                 {comment.commentContent}
               </div>
               <div className="button-div">
-                {currentUser.id === comment.userId ? (
+                {currentUser.id === comment.userId && (
                   <button
                     className="edit-button"
                     onClick={() => navigate(`/editcomment/${comment.id}`)}
                   >
                     Edit
                   </button>
-                ) : (
-                  ""
                 )}
-                {currentUser.id === comment.userId ? (
+                {currentUser.id === comment.userId && (
                   <button
                     className="delete-button"
-                    onClick={() => handleDeleteComment(comment)}
+                    onClick={() => handleDeleteComment(comment.id)}
                   >
                     Delete
                   </button>
-                ) : (
-                  ""
                 )}
               </div>
             </div>

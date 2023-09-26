@@ -17,3 +17,9 @@ export const getTeamByDriverId = (driverId) => {
     .then((res) => res.json())
     .then((data) => data.MRData.ConstructorTable.Constructors[0]);
 };
+
+export const getDriverImageById = (driverObj) => {
+  return fetch(`http://localhost:8088/drivers?driverId=${driverObj.driverId}`)
+  .then((response) => response.json())
+  .then((driverObj) => driverObj[0])
+} 

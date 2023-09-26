@@ -12,26 +12,27 @@ export const CountdownTimer = () => {
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await fetch("https://ergast.com/api/f1/current/next.json");
+      const response = await fetch(
+        "https://ergast.com/api/f1/current/next.json"
+      );
       const data = await response.json();
       const nextRace = data.MRData.RaceTable.Races[0];
-  
+
       // Extract the date and time of the next race in UTC
       const raceDateTimeUtc = new Date(`${nextRace?.date}T${nextRace?.time}`);
-  
+
       // Convert the race time to local time
       const raceDateTimeLocal = new Date(
-        raceDateTimeUtc.getTime() -
-          new Date().getTimezoneOffset() * 60 * 1000
+        raceDateTimeUtc.getTime() - new Date().getTimezoneOffset() * 60 * 1000
       );
-  
+
       // Calculate time remaining using local time
       const currentTime = new Date().getTime();
       const timeRemainingUntilRace = raceDateTimeLocal - currentTime;
-  
+
       setTimeRemaining(timeRemainingUntilRace);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   }, []);
 
@@ -74,11 +75,13 @@ export const CountdownTimer = () => {
     <div>
       <h2>Next Race Countdown:</h2>
       <p>
-        {days > 0 && formatTime(days, "day")}{" "}
-        {hours > 0 && formatTime(hours, "hour")}{" "}
-        {minutes > 0 && formatTime(minutes, "minute")}{" "}
-        {seconds > 0 && formatTime(seconds, "second")}
+        {days >= 0 && formatTime(days, "day")}{" "}
+        {hours >= 0 && formatTime(hours, "hour")}{" "}
+        {minutes >= 0 && formatTime(minutes, "minute")}
+        {" and "}
+        {seconds >= 0 && formatTime(seconds, "second")}
+        {" until lights out"}
       </p>
     </div>
   );
-}
+};

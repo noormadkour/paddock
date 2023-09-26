@@ -13,7 +13,9 @@
 }
 
 .driver-container {
-  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* margin: 20px; */
   color: var(--offWhite);
   text-shadow: 0px 0px 2px rgb(0, 0, 0);
   background-color: var(--primary);
@@ -66,16 +68,80 @@
   margin: 30px;
 }
 
-.driver-comment {
+.driver-comment-1 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   width: 40%;
   height: 150px;
-  background-color: var(--offWhite);
+  background-color: rgb(176, 255, 176);
   /* border-bottom: 2px solid black;
   border-left: 2px solid black; */
   box-shadow: 1px 1px 5px black;
+  border-radius: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+  flex-basis: 30;
+  margin: 0.5rem;
+}
+
+.driver-comment-4 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 40%;
+  height: 150px;
+  background-color: rgb(183, 183, 255);
+  /* border-bottom: 2px solid black;
+  border-left: 2px solid black; */
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+  flex-basis: 30;
+  margin: 0.5rem;
+}
+
+.driver-comment-2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 40%;
+  height: 150px;
+  background-color: rgb(255, 180, 180);
+  /* border-bottom: 2px solid black;
+  border-left: 2px solid black; */
+  box-shadow: 1px 1px 5px black;
+  border-radius: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+  flex-basis: 30;
+  margin: 0.5rem;
+}
+
+.driver-comment-3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 40%;
+  height: 150px;
+  background-color: rgb(238, 160, 238);
+  /* border-bottom: 2px solid black;
+  border-left: 2px solid black; */
+  box-shadow: 1px 1px 5px black;
+  border-radius: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+  flex-basis: 30;
+  margin: 0.5rem;
+}
+
+.driver-comment-5 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 40%;
+  height: 150px;
+  background-color: rgb(244, 214, 159);
+  /* border-bottom: 2px solid black;
+  border-left: 2px solid black; */
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
   border-radius: 0.5rem;
   padding: 1rem 1rem 0 1rem;
   flex-basis: 30;
@@ -100,7 +166,7 @@
 
 .driver-team {
   margin-top: 10px;
-  color: var(--tertiary)
+  color: var(--tertiary);
 }
 
 .link-style {
@@ -118,7 +184,7 @@
   margin-bottom: 20px;
   margin-left: 10px;
   margin-right: auto;
-  color: grey
+  color: grey;
 }
 
 .driver-comment-category {
@@ -131,5 +197,17 @@
 
 .driver-comment-metadata {
   display: flex;
+}
 
+.driver-image {
+  width: 125px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+}
+
+.driver-text {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

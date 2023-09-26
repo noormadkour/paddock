@@ -77,11 +77,11 @@
     },
     {
       "id": 3,
-      "category": "Question"
+      "category": "Prediction"
     },
     {
       "id": 4,
-      "category": "Prediction"
+      "category": "Question"
     },
     {
       "id": 5,
@@ -154,9 +154,9 @@
     },
     {
       "driverId": "alonso",
-      "categoryId": 1,
+      "categoryId": 2,
       "userId": 1,
-      "commentContent": "Old but amazing",
+      "commentContent": "Old and sucks",
       "id": 23
     },
     {
@@ -172,6 +172,110 @@
       "userId": 1,
       "commentContent": "good!",
       "id": 25
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 4,
+      "userId": 1,
+      "commentContent": "Is he any good?",
+      "id": 26
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 5,
+      "userId": 1,
+      "commentContent": "Yeah he's amazing\n",
+      "id": 27
+    }
+  ],
+  "drivers": [
+    {
+      "driverId": "hamilton",
+      "imageUrl": "https://www.formula1points.com/images/driver/lewis-hamilton.jpg"
+    },
+    {
+      "driverId": "bottas",
+      "imageUrl": "https://www.formula1points.com/images/driver/valtteri-bottas.jpg"
+    },
+    {
+      "driverId": "max_verstappen",
+      "imageUrl": "https://www.formula1points.com/images/driver/max-verstappen.jpg"
+    },
+    {
+      "driverId": "lawson",
+      "imageUrl": "https://www.formula1points.com/images/driver/liam-lawson.jpg"
+    },
+    {
+      "driverId": "leclerc",
+      "imageUrl": "https://www.formula1points.com/images/driver/charles-leclerc.jpg"
+    },
+    {
+      "driverId": "perez",
+      "imageUrl": "https://www.formula1points.com/images/driver/sergio-perez.jpg"
+    },
+    {
+      "driverId": "sainz",
+      "imageUrl": "https://www.formula1points.com/images/driver/carlos-sainz.jpg"
+    },
+    {
+      "driverId": "norris",
+      "imageUrl": "https://www.formula1points.com/images/driver/lando-norris.jpg"
+    },
+    {
+      "driverId": "russell",
+      "imageUrl": "https://www.formula1points.com/images/driver/george-russell.jpg"
+    },
+    {
+      "driverId": "ocon",
+      "imageUrl": "https://www.formula1points.com/images/driver/esteban-ocon.jpg"
+    },
+    {
+      "driverId": "gasly",
+      "imageUrl": "https://www.formula1points.com/images/driver/pierre-gasly.jpg"
+    },
+    {
+      "driverId": "alonso",
+      "imageUrl": "https://www.formula1points.com/images/driver/fernando-alonso.jpg"
+    },
+    {
+      "driverId": "stroll",
+      "imageUrl": "https://www.formula1points.com/images/driver/lance-stroll.jpg"
+    },
+    {
+      "driverId": "kevin_magnussen",
+      "imageUrl": "https://www.formula1points.com/images/driver/kevin-magnussen.jpg"
+    },
+    {
+      "driverId": "hulkenberg",
+      "imageUrl": "https://www.formula1points.com/images/driver/nico-hulkenberg.jpg"
+    },
+    {
+      "driverId": "albon",
+      "imageUrl": "https://www.formula1points.com/images/driver/alexander-albon.jpg"
+    },
+    {
+      "driverId": "sargeant",
+      "imageUrl": "https://www.formula1points.com/images/driver/logan-sargeant.jpg"
+    },
+    {
+      "driverId": "tsunoda",
+      "imageUrl": "https://www.formula1points.com/images/driver/yuki-tsunoda.jpg"
+    },
+    {
+      "driverId": "zhou",
+      "imageUrl": "https://www.formula1points.com/images/driver/guanyu-zhou.jpg"
+    },
+    {
+      "driverId": "de_vries",
+      "imageUrl": "https://www.formula1points.com/images/driver/nyck-de-vries.jpg"
+    },
+    {
+      "driverId": "ricciardo",
+      "imageUrl": "https://www.formula1points.com/images/driver/daniel-ricciardo.jpg"
+    },
+    {
+      "driverId": "piastri",
+      "imageUrl": "https://www.formula1points.com/images/driver/oscar-piastri.jpg"
     }
   ]
 }

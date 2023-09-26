@@ -52,8 +52,8 @@ export const getCategories = () => {
   return fetch("http://localhost:8088/categories").then((res) => res.json());
 };
 
-export const deleteComment = (comment) => {
-  return fetch(`http://localhost:8088/driverComments/${comment.id}`, {
+export const deleteComment = (commentId) => {
+  return fetch(`http://localhost:8088/driverComments/${commentId}`, {
       method: "DELETE"
     });
 }
