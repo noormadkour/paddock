@@ -1,5 +1,7 @@
 .fieldset-div{
-    background-color: var(--outline);
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 0 30px 10px 30px;
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -15,12 +17,19 @@
 }
 
 .comment-input {
-    width: 300px;
-    height: 100px;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
     border-radius: 10px;
 }
 
-.driver-comment-form {
+.driver-comment-form{
+    display: flex;
+    justify-content: center;
+}
+
+.edit-comment-form{
+    margin-top: 100px;
     display: flex;
     justify-content: center;
 }
@@ -30,6 +39,9 @@
     justify-content: center;
 }
 
-.submit-button {
-    
+.category-heading {
+    font-weight: bold;
+}
+.comment-heading {
+    font-weight: bold;
 }

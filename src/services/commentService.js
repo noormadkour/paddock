@@ -22,7 +22,7 @@ export const getCommentByUserId = (userId) => {
 };
 
 export const getAllComments = () => {
-  return fetch("http://localhost:8088/driverComments").then(res => res.json())
+  return fetch("http://localhost:8088/driverComments?_expand=user&_expand=category").then(res => res.json())
 }
 
 export const postNewComment = (commentObj) => {
@@ -52,8 +52,8 @@ export const getCategories = () => {
   return fetch("http://localhost:8088/categories").then((res) => res.json());
 };
 
-export const deleteComment = (comment) => {
-  return fetch(`http://localhost:8088/driverComments/${comment.id}`, {
+export const deleteComment = (commentId) => {
+  return fetch(`http://localhost:8088/driverComments/${commentId}`, {
       method: "DELETE"
     });
 }

@@ -8,3 +8,30 @@
     margin: 10px;
     box-shadow: 10px;
   }
+
+  .user-info {
+    color: var(--offWhite);
+    margin-left: 50px;
+  }
+
+  .driver-comment {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 150px;
+    background-color: var(--offWhite);
+    /* border-bottom: 2px solid black;
+    border-left: 2px solid black; */
+    box-shadow: 1px 1px 5px black;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem 0 1rem;
+    flex-basis: 30;
+    margin: 0.5rem;
+  }
+  
+  .button-div {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+  }

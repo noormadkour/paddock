@@ -59,6 +59,11 @@
       "fullName": "Tricia Swift",
       "email": "tricia@email.com",
       "id": 12
+    },
+    {
+      "fullName": "Dave",
+      "email": "dve@email.com",
+      "id": 13
     }
   ],
   "categories": [
@@ -72,11 +77,11 @@
     },
     {
       "id": 3,
-      "category": "Question"
+      "category": "Prediction"
     },
     {
       "id": 4,
-      "category": "Prediction"
+      "category": "Question"
     },
     {
       "id": 5,
@@ -95,7 +100,7 @@
       "driverId": "alonso",
       "categoryId": 1,
       "userId": 1,
-      "commentContent": "Alonso is one of the best of all time",
+      "commentContent": "Alonso is one of the best of all time. for real",
       "id": 6
     },
     {
@@ -120,13 +125,6 @@
       "id": 13
     },
     {
-      "driverId": "albon",
-      "categoryId": 1,
-      "userId": 1,
-      "commentContent": "He did alright I guess. Coulda been worse",
-      "id": 15
-    },
-    {
       "driverId": "ocon",
       "categoryId": 1,
       "userId": 1,
@@ -148,20 +146,6 @@
       "id": 18
     },
     {
-      "driverId": "albon",
-      "categoryId": 3,
-      "userId": 1,
-      "commentContent": "Who did he race for before Williams, was it with RedBull?",
-      "id": 20
-    },
-    {
-      "driverId": "albon",
-      "categoryId": 5,
-      "userId": 9,
-      "commentContent": "Yeah he raced for RedBull before being replaced by Gasly, who was then Replaced by Perez. It's a hot seat that second RedBull seat",
-      "id": 21
-    },
-    {
       "driverId": "alonso",
       "categoryId": 3,
       "userId": 11,
@@ -169,11 +153,136 @@
       "id": 22
     },
     {
+      "driverId": "alonso",
+      "categoryId": 2,
+      "userId": 1,
+      "commentContent": "Old and sucks",
+      "id": 23
+    },
+    {
+      "driverId": "max_verstappen",
+      "categoryId": 1,
+      "userId": 13,
+      "commentContent": "GOAT",
+      "id": 24
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 1,
+      "userId": 1,
+      "commentContent": "good!",
+      "id": 25
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 4,
+      "userId": 1,
+      "commentContent": "Is he any good?",
+      "id": 26
+    },
+    {
       "driverId": "albon",
       "categoryId": 5,
       "userId": 1,
-      "commentContent": "He's from Thailand but has an English Race License",
-      "id": 24
+      "commentContent": "Yeah he's amazing\n",
+      "id": 27
+    },
+    {
+      "driverId": "albon",
+      "categoryId": 1,
+      "userId": 1,
+      "commentContent": "test for delete\n",
+      "id": 28
+    }
+  ],
+  "drivers": [
+    {
+      "driverId": "hamilton",
+      "imageUrl": "https://www.formula1points.com/images/driver/lewis-hamilton.jpg"
+    },
+    {
+      "driverId": "bottas",
+      "imageUrl": "https://www.formula1points.com/images/driver/valtteri-bottas.jpg"
+    },
+    {
+      "driverId": "max_verstappen",
+      "imageUrl": "https://www.formula1points.com/images/driver/max-verstappen.jpg"
+    },
+    {
+      "driverId": "lawson",
+      "imageUrl": "https://www.formula1points.com/images/driver/liam-lawson.jpg"
+    },
+    {
+      "driverId": "leclerc",
+      "imageUrl": "https://www.formula1points.com/images/driver/charles-leclerc.jpg"
+    },
+    {
+      "driverId": "perez",
+      "imageUrl": "https://www.formula1points.com/images/driver/sergio-perez.jpg"
+    },
+    {
+      "driverId": "sainz",
+      "imageUrl": "https://www.formula1points.com/images/driver/carlos-sainz.jpg"
+    },
+    {
+      "driverId": "norris",
+      "imageUrl": "https://www.formula1points.com/images/driver/lando-norris.jpg"
+    },
+    {
+      "driverId": "russell",
+      "imageUrl": "https://www.formula1points.com/images/driver/george-russell.jpg"
+    },
+    {
+      "driverId": "ocon",
+      "imageUrl": "https://www.formula1points.com/images/driver/esteban-ocon.jpg"
+    },
+    {
+      "driverId": "gasly",
+      "imageUrl": "https://www.formula1points.com/images/driver/pierre-gasly.jpg"
+    },
+    {
+      "driverId": "alonso",
+      "imageUrl": "https://www.formula1points.com/images/driver/fernando-alonso.jpg"
+    },
+    {
+      "driverId": "stroll",
+      "imageUrl": "https://www.formula1points.com/images/driver/lance-stroll.jpg"
+    },
+    {
+      "driverId": "kevin_magnussen",
+      "imageUrl": "https://www.formula1points.com/images/driver/kevin-magnussen.jpg"
+    },
+    {
+      "driverId": "hulkenberg",
+      "imageUrl": "https://www.formula1points.com/images/driver/nico-hulkenberg.jpg"
+    },
+    {
+      "driverId": "albon",
+      "imageUrl": "https://www.formula1points.com/images/driver/alexander-albon.jpg"
+    },
+    {
+      "driverId": "sargeant",
+      "imageUrl": "https://www.formula1points.com/images/driver/logan-sargeant.jpg"
+    },
+    {
+      "driverId": "tsunoda",
+      "imageUrl": "https://www.formula1points.com/images/driver/yuki-tsunoda.jpg"
+    },
+    {
+      "driverId": "zhou",
+      "imageUrl": "https://www.formula1points.com/images/driver/guanyu-zhou.jpg"
+    },
+    {
+      "driverId": "de_vries",
+      "imageUrl": "https://www.formula1points.com/images/driver/nyck-de-vries.jpg"
+    },
+    {
+      "driverId": "ricciardo",
+      "imageUrl": "https://www.formula1points.com/images/driver/daniel-ricciardo.jpg"
+    },
+    {
+      "driverId": "piastri",
+      "imageUrl": "https://www.formula1points.com/images/driver/oscar-piastri.jpg"
     }
   ]
 }

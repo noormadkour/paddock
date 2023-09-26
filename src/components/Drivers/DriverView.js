@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getDriverById } from "../../services/driverService";
 import { useNavigate, useParams } from "react-router-dom";
 import { deleteComment, getAllComments } from "../../services/commentService";
-import { CommentForm } from "../Forms/Forms";
+import { CommentForm } from "../Forms";
 import "./Drivers.css";
 
 export const DriverView = ({ currentUser }) => {
@@ -27,8 +27,8 @@ export const DriverView = ({ currentUser }) => {
     );
   }, [driverComments, driverId]);
 
-  const handleDeleteComment = (comment) => {
-    deleteComment(comment).then(() =>
+  const handleDeleteComment = (commentId) => {
+    deleteComment(commentId).then(() =>
       getAllComments().then((commentsArray) => setDriverComments(commentsArray))
     );
   };
@@ -37,53 +37,74 @@ export const DriverView = ({ currentUser }) => {
     <>
       <div className="driver-detail-container" key={driver.driverId}>
         <div>
-          <div className="driver-detail-info">Name</div>
-          <div>
+          <span className="driver-detail-header">Name: </span>
+          <span className="driver-detail-info">
             {driver.givenName} {driver.familyName}
-          </div>
+          </span>
         </div>
         <div>
-          <div className="driver-detail-info">Driver Code: </div>
-          <span>{driver.code}</span>
+          <span className="driver-detail-header">Driver Code: </span>
+          <span className="driver-detail-info">{driver.code}</span>
         </div>
         <div>
-          <div className="driver-detail-info">Permanent Number</div>
-          <div>{driver.permanentNumber}</div>
+          <span className="driver-detail-header">Permanent Number: </span>
+          <span className="driver-detail-info">{driver.permanentNumber}</span>
+        </div>
+        <div>
+          <span className="driver-detail-header">Nationality: </span>
+          <span className="driver-detail-info">{driver.nationality}</span>
+        </div>
+        <div>
+          <span className="driver-detail-header">Wiki Page: </span>
+          <a href={driver.url} className="driver-detail-info">
+            {driver.url}
+          </a>
         </div>
       </div>
       <div className="driver-comments-container">
-        <div className="driver-comments-header">Comments: </div>
+        <h2 className="driver-comments-header">Comments: </h2>
         {filteredComments.map((comment) => {
           return (
-            <div className="driver-comment" key={comment.id}>
-              {comment.commentContent}{" "}
+            <div className={`driver-comment-${comment.category.category}`} key={comment.id}>
+              <div className="driver-comment-metadata">
+                <div className="driver-comment-author">
+                  User: {comment?.user?.fullName}
+                </div>
+                <div className="driver-comment-category">
+                  Category: {comment?.category.category}
+                </div>
+              </div>
+              <div className="driver-comment-content">
+                {comment.commentContent}
+              </div>
               <div className="button-div">
-                {currentUser.id === comment.userId ? (
+                {currentUser.id === comment.userId && (
                   <button
                     className="edit-button"
                     onClick={() => navigate(`/editcomment/${comment.id}`)}
                   >
                     Edit
                   </button>
-                ) : (
-                  ""
                 )}
-                {currentUser.id === comment.userId ? (
+                {currentUser.id === comment.userId && (
                   <button
                     className="delete-button"
-                    onClick={() => handleDeleteComment(comment)}
+                    onClick={() => handleDeleteComment(comment.id)}
                   >
                     Delete
                   </button>
-                ) : (
-                  ""
                 )}
               </div>
             </div>
           );
         })}
       </div>
-      <CommentForm currentUser={currentUser} driverComments={driverComments} />
+      <CommentForm
+        setDriverComments={setDriverComments}
+        currentUser={currentUser}
+        driverComments={driverComments}
+        driver={driver}
+      />
     </>
   );
 };

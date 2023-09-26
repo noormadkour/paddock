@@ -30,16 +30,27 @@ export const UserProfile = ({ currentUser }) => {
   return (<>
     <div className="user-info-container">
       <div className="user-info">
-        <h2>Hey there, {currentUser.fullName}</h2>
-        <p> Here are the comments you've made on various drivers</p>
+        <h1>Hey there, {currentUser.fullName}</h1>
+        <p> Here are any comments you've made on drivers</p>
       </div>
     </div>
     <div className="driver-comments-container">
-      <div className="driver-comments-header">Comments: </div>
+      <h2 className="driver-comments-header">Comments: </h2>
       {userComments.map((comment) => {
         return (
           <div className="driver-comment" key={comment.id}>
+          <div className="driver-comment-metadata">
+            <div className="driver-comment-author">
+              DriverId: {comment?.driverId}
+            </div>
+            <div className="driver-comment-category">
+              {" "}
+              Category: {comment?.category.category}
+            </div>
+          </div>
+          <div className="driver-comment-content">
             {comment.commentContent}
+          </div>
             <div className="button-div">
               {currentUser.id === comment.userId ? (
                 <button className="edit-button" onClick={() => navigate(`/editcomment/${comment.id}`)}>
