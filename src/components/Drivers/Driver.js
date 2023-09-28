@@ -15,7 +15,7 @@ export const Driver = ({ driverObj }) => {
         setDriversTeam(teamObj)
       );
     driverObj.driverId &&
-      getDriverImageById(driverObj).then((localDriverObj) =>
+      getDriverImageById(driverObj.driverId).then((localDriverObj) =>
         setLocalDriverObj(localDriverObj)
       );
   }, [driverObj]);

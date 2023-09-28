@@ -1,6 +1,9 @@
 .navbar {
     display: flex;
     flex-wrap: nowrap;
+    background-image: url('../../assets/carbonfiber.jpg');
+    background-size: 16.5%;
+    background-repeat: repeat;
     background-color: var(--primary);
     margin: auto;
     width: 90%;
@@ -14,11 +17,13 @@
     list-style-type: none;
     text-align: center;
     color: var(--offWhite);
+    text-shadow: 0px 0px 3px black;
   }
 
   .navbar-item:hover {
     transform: scale(1.1);
-    color: black;
+    color: var(--offWhite);
+    text-shadow: 0px 0px 6px black;
   }
   
   .navbar-link {
@@ -32,6 +37,7 @@
   }
   
   .navbar-link:hover {
-    color: var(--appBackground);
+    color: var(--offWhite);
+    text-shadow: 0px 0px 6px black;
   }
   

@@ -5,9 +5,11 @@ import React, {
   useMemo,
   useRef,
 } from "react";
+import "./Countdown.css"
 
 export const CountdownTimer = () => {
   const [timeRemaining, setTimeRemaining] = useState(0);
+  const [nextRace, setNextRace] = useState({})
   const intervalRef = useRef(null);
 
   const fetchData = useCallback(async () => {
@@ -17,6 +19,7 @@ export const CountdownTimer = () => {
       );
       const data = await response.json();
       const nextRace = data.MRData.RaceTable.Races[0];
+      setNextRace(nextRace)
 
       // Extract the date and time of the next race in UTC
       const raceDateTimeUtc = new Date(`${nextRace?.date}T${nextRace?.time}`);
@@ -73,15 +76,20 @@ export const CountdownTimer = () => {
 
   return (
     <div>
-      <h2>Next Race Countdown:</h2>
-      <p>
+      <h2 className="countdown-header">Next Race Info:</h2>
+      <div className="next-race-div">
+        <div>{nextRace.raceName} at the {nextRace.Circuit?.circuitName}</div>
+        <div>{nextRace.Circuit?.Location.locality}, {nextRace.Circuit?.Location.country}</div>
+        <div>Round {nextRace.round}</div>
+      </div>
+      <h2 className="countdown-header">Race Start In:</h2>
+      <div className="countdown-timer">
         {days >= 0 && formatTime(days, "day")}{" "}
         {hours >= 0 && formatTime(hours, "hour")}{" "}
         {minutes >= 0 && formatTime(minutes, "minute")}
-        {" and "}
+        {" "}
         {seconds >= 0 && formatTime(seconds, "second")}
-        {" until lights out"}
-      </p>
+      </div>
     </div>
   );
 };

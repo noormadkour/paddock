@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 
+
 /* FONTS
 font-family: "Nunito", sans-serif;
 font-family: "Quicksand", sans-serif;
@@ -40,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* This prevents all the links in the app from having default underline */
@@ -62,16 +63,17 @@ button {
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
-  color: var(--offWhite);
-  background-color: var(--tertiary);
+  color: var(--appBackground);
+  background-color: var(--offWhite);
   cursor: pointer;
-  box-shadow: 1px 1px 2px var(--secondary);
+  box-shadow: 1px 1px 2px black;
 }
 
 button:hover {
-  background-color: var(--secondary);
+  transform: scale(1.1);
+  background-color: var(--appBackground);
   color: var(--offWhite);
-  box-shadow: 1px 1px 1px var(--appBackground);
+  box-shadow: 2px 2px 5px black;
 }
 
 /* These are all the color options for the buttons */
@@ -108,13 +110,4 @@ button:hover {
   background-color: #71a500;
 }
 
-/* This CSS can be deleted. It is only used for the first chapter */
-.welcome {
-  text-align: center;
-  margin: 5rem 14rem;
-  font-size: 4rem;
-  color: aliceblue;
-  font-weight: bold;
-  text-shadow: 2px 3px 4px lightslategray;
-}
 

@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+
+.countdown-timer {
+  font-family: "Chakra Petch", sans-serif;
+  font-style: normal;
+}
+
+.countdown-header {
+    font-style: normal;
+}

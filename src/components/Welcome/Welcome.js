@@ -10,7 +10,9 @@ export const Welcome = ({ currentUser }) => {
       </h1>
       <br/>
       <br/>
-      <div>Your one-stop shop for all things F1 - but not really this has a very specific task</div>
+      <br/>
+      <br/>
+      
       <CountdownTimer />
     </div>
   );

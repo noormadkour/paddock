@@ -1,10 +1,18 @@
+.main-comment-container {
+  display: flex;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  margin: 20px;
+  padding: 10px 0px 0px 0px;
+}
+
 .drivers-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  margin: 0.5rem;
+  margin: 1.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .drivers-container > * {
@@ -16,6 +24,7 @@
   display: flex;
   justify-content: space-between;
   color: var(--offWhite);
+  width: 300px;
   text-shadow: 0px 0px 2px rgb(0, 0, 0);
   background-color: var(--primary);
   border: 1px solid var(--outline);
@@ -30,7 +39,7 @@
 }
 
 .driver-detail-container {
-  align-content: center;
+  display: flex;
   width: auto;
   margin: 30px;
   background-color: var(--offWhite);
@@ -39,14 +48,31 @@
   padding: 1rem;
 }
 
+.driver-detail-image {
+  border-radius: 10px;
+  margin: 0.5rem;
+  box-shadow: 2px 2px 5px black;
+}
+
+.driver-detail-stats {
+  margin: 1rem 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .driver-info {
   color: var(--offWhite);
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .driver-detail-info {
   color: var(--secondary);
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+.driver-detail-header {
+  font-weight: bold;
 }
 
 .driver-header {
@@ -58,16 +84,8 @@
 }
 
 .driver-comments-header {
-  margin-left: 30px;
+  margin: 0 30px 30px 0px;
 }
-
-.main-comment-container {
-  background-color: var(--primary);
-  border-radius: 0.5rem;
-  margin: 20px;
-  padding: 10px 0px 0px 0px;
-}
-
 
 .driver-comments-container {
   display: flex;
@@ -77,8 +95,9 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 30px;
+  justify-content: flex-start;
+  margin: 0px 30px;
+  flex-basis: 70%;
 }
 
 .button-div {
@@ -131,13 +150,10 @@
 
 .driver-comment-metadata {
   display: flex;
-
 }
 
-
 .driver-comment-content {
-  margin: 0 20px 25px 20px ;
-
+  margin: 0 20px 25px 20px;
 }
 
 .driver-comment-Praise {
@@ -145,7 +161,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 40%;
+  width: 90%;
   height: auto;
   background-color: rgb(195, 255, 195);
   box-shadow: 1px 1px 5px black;
@@ -159,9 +175,9 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 40%;
+  width: 90%;
   height: auto;
-  background-color:rgb(255, 167, 167);
+  background-color: rgb(255, 167, 167);
   box-shadow: 1px 1px 5px black;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -173,7 +189,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 40%;
+  width: 90%;
   height: auto;
   background-color: rgb(255, 205, 255);
   box-shadow: 1px 1px 5px black;
@@ -187,7 +203,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 40%;
+  width: 90%;
   height: auto;
   background-color: rgb(255, 229, 180);
   box-shadow: 1px 1px 5px black;
@@ -201,7 +217,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 40%;
+  width: 90%;
   height: auto;
   background-color: rgb(194, 194, 255);
   box-shadow: 1px 1px 5px black;
