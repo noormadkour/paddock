@@ -1,20 +1,25 @@
-import "./Races.css"
+import { useEffect, useState } from "react";
+import "./Races.css";
+import { getExtraInfoPerRound } from "../../services/raceService";
 
 export const Race = ({ raceObj }) => {
+  const [extraInfo, setExtraInfo] = useState({});
+
+  useEffect(() => {
+    getExtraInfoPerRound(raceObj.round).then((extraInfo) =>
+      setExtraInfo(extraInfo)
+    );
+  }, [raceObj]);
+
   return (
     <div className="race-container" key={raceObj.round}>
-      <div>
-        <h2>
-          {raceObj.raceName}
-        </h2>
+      <div className="race-image-div">
+        <img className="race-mini-map" src={extraInfo?.miniCircuit} alt={extraInfo?.raceName} />
       </div>
-      <div>
-        <span className="race-info">Circuit: </span>
-        <span>{raceObj.Circuit.circuitName}</span>
-      </div>
-      <div>
-        <span className="race-info">Date: </span>
-        <span>{raceObj.date}</span>
+      <div className="race-text-div">
+        <h2>{raceObj.raceName}</h2>
+        <div>{raceObj.Circuit.circuitName}</div>
+        <div>{raceObj.date}</div>
       </div>
     </div>
   );

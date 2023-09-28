@@ -34,7 +34,7 @@ export const LongEditForm = ({ currentUser }) => {
 
   return (
     <form className="edit-comment-form">
-      <div className="fieldset-div">
+      <div className="edit-page-div">
         <fieldset>
           <h2>Edit your comment</h2>
           <label className="category-heading">Category: </label>
