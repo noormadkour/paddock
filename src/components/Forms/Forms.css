@@ -1,57 +1,61 @@
-.fieldset-div{
-    background-color: var(--primary);
-    border-radius: 10px;
-    padding: 0 30px 10px 30px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    margin-top: 100px;
-    width: 500px;
+.fieldset-div {
+  background-color: var(--primary);
+  border-radius: 10px;
+  padding: 0 30px 10px 30px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-top: 100px;
+  width: 500px;
 }
 
 fieldset {
-    background-color: var(--secondary);
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 2px 2px 5px black;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 2px 2px 5px black;
 }
 
 .radio-categories {
-    display: flex;
-    margin: 10px;
+  display: flex;
+  margin: 10px;
 }
 
 .category {
-    margin: auto
+  margin: auto;
 }
 
 .comment-input {
-    width: 450px;
-    height: 150px;
-    margin-top: 20px;
-    border-radius: 10px;
-    padding: 5px;
+  width: 450px;
+  height: 150px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
-.driver-comment-form{
-    display: flex;
-    justify-content: center;
+.driver-comment-form {
+  display: flex;
+  justify-content: center;
 }
 
-.edit-comment-form{
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
+.edit-comment-form {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
 }
 
-.comment-button-div{
-    display: flex;
-    justify-content: center;
+.edit-fieldset {
+  background-color: var(--offWhite);
+}
+
+.comment-button-div {
+  display: flex;
+  justify-content: center;
 }
 
 .category-heading {
-    font-weight: bold;
+  font-weight: bold;
 }
 .comment-heading {
-    font-weight: bold;
+  font-weight: bold;
 }
