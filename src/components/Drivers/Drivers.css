@@ -96,8 +96,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: center;
   margin: 0px 30px;
-  flex-basis: 70%;
+  flex-basis: 60%;
 }
 
 .button-div {
@@ -161,9 +162,9 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 90%;
+  width: 700px;
   height: auto;
-  background-color: rgb(195, 255, 195);
+  background-color: #e6ffe6;
   box-shadow: 1px 1px 5px black;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -175,9 +176,9 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 90%;
+  width: 700px;
   height: auto;
-  background-color: rgb(255, 167, 167);
+  background-color: rgb(241, 206, 206);
   box-shadow: 1px 1px 5px black;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -189,9 +190,9 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 90%;
+  width: 700px;
   height: auto;
-  background-color: rgb(255, 205, 255);
+  background-color: rgb(255, 212, 255);
   box-shadow: 1px 1px 5px black;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -203,9 +204,9 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 90%;
+  width: 700px;
   height: auto;
-  background-color: rgb(255, 229, 180);
+  background-color: rgb(255, 255, 226);
   box-shadow: 1px 1px 5px black;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -217,9 +218,9 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 90%;
+  width: 700px;
   height: auto;
-  background-color: rgb(194, 194, 255);
+  background-color: rgb(233, 233, 255);
   box-shadow: 1px 1px 5px black;
   border-radius: 0.5rem;
   padding: 0.5rem;

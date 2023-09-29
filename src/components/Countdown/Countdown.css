@@ -8,3 +8,28 @@
 .countdown-header {
     font-style: normal;
 }
+
+.countdown-container {
+
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-timer{
+  background-color: var(--offWhite);
+  box-shadow: 0px 0px 10px black;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+.countdown-value {
+  font-size: 50px;
+}
+
+.countdown-unit {
+  font-size: 15px;
+}
