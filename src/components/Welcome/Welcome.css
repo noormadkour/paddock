@@ -3,20 +3,23 @@
   width: 60%;
   text-align: center;
   padding: 5rem 3rem;
-  background-color: var(--primary);
+  background-color: #20202000;
   border-radius: 10px;
 }
 
 /* This targets any h1 that is a child of an element with the .welcome-container class */
 .welcome-container > h1 {
+  font-size: 75px;
+  text-shadow: 0px 0px 10px black;
   display: flex;
   flex-direction: column;
-  color: var(--appBackground);
+  color: var(--offWhite);
 }
 
 /* This targets any div that is a child of an element with the .welcome-container class */
 .welcome-container > div {
   font-style: italic;
-  color: var(--appBackground);
+  text-shadow: 0px 0px 3px black;
+  color: var(--offWhite);
 }
 

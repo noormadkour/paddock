@@ -16,20 +16,23 @@
 }
 
 .countdown-timer{
-  background-color: var(--offWhite);
+  background-color: rgb(2, 84, 2);
   box-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 5px black;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
+  width: 320px;
 }
 
 .countdown-value {
   font-size: 50px;
+  width: 60px;
 }
 
 .countdown-unit {
   font-size: 15px;
+  width: 60px;
 }

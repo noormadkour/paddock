@@ -1,5 +1,5 @@
 .fieldset-div {
-  background-color: var(--primary);
+  background-color: none;
   border-radius: 10px;
   padding: 0 30px 10px 30px;
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 fieldset {
-  background-color: var(--secondary);
+  background-color: var(--offWhite);
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 2px 2px 5px black;

@@ -32,6 +32,11 @@ textarea {
 
 body {
   background-color: var(--appBackground);
+  background-image: url("./assets/f1-cover1.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  min-height: 100vh;
+  max-height: 100vh;
   position: relative;
 }
 
