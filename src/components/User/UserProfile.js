@@ -43,7 +43,7 @@ export const UserProfile = ({ currentUser }) => {
               >
                 <div className="driver-comment-metadata">
                   <div className="driver-comment-author">
-                    DriverId: {comment?.driverId}
+                    Driver: {comment?.driverId}
                   </div>
                   <div className="driver-comment-category">
                     {" "}

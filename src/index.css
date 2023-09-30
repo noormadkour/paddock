@@ -72,17 +72,17 @@ button {
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
-  color: var(--appBackground);
-  background-color: var(--offWhite);
+  color: var(--offWhite);
+  background-color: rgba(18, 18, 18, 0.918);;
   cursor: pointer;
-  box-shadow: 1px 1px 2px black;
+  box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.502);
 }
 
 button:hover {
   transform: scale(1.1);
-  background-color: var(--appBackground);
-  color: var(--offWhite);
-  box-shadow: 2px 2px 5px black;
+  background-color: var(--offWhite);
+  color: var(--appBackground);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.735);
 }
 
 /* These are all the color options for the buttons */
