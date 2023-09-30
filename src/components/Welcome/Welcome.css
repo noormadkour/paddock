@@ -1,8 +1,8 @@
 .welcome-container {
-  margin: 2rem auto;
+  margin: 0 auto;
   width: 60%;
   text-align: center;
-  padding: 5rem 3rem;
+  padding: 1rem 3rem;
   background-color: #20202000;
   border-radius: 10px;
 }
@@ -14,6 +14,8 @@
   display: flex;
   flex-direction: column;
   color: var(--offWhite);
+  background-color: rgba(0, 0, 0, 0.386);
+  border-radius: 10px;  
 }
 
 /* This targets any div that is a child of an element with the .welcome-container class */

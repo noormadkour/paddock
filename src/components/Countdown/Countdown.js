@@ -85,7 +85,7 @@ export const CountdownTimer = () => {
   };
 
   return (
-    <div>
+    <div className="countdown-main-container">
       <h2 className="countdown-header">Next Race Info:</h2>
       <div className="next-race-div">
         <div>
@@ -97,7 +97,7 @@ export const CountdownTimer = () => {
         </div>
         <div>Round {nextRace.round}</div>
       </div>
-      <h2 className="countdown-header">Race Start In:</h2>
+      <h2 className="countdown-header">Lights Out in:</h2>
       <div className="countdown-container">
         <div className="countdown-timer">
           <div className="countdown-timer-days">

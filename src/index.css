@@ -31,14 +31,18 @@ textarea {
 }
 
 body {
-  background-color: var(--appBackground);
-  background-image: url("./assets/f1-cover1.jpg");
+  background: rgba(255, 255, 255, 0.344);
+  background-image: url("./assets/front-dark.png");
   background-size: cover;
   background-repeat: repeat;
   min-height: 100vh;
   max-height: 100vh;
+  opacity: 1.0; /* Adjust opacity as needed */
+  z-index: -1; /* Ensure it's positioned behind other content */
   position: relative;
 }
+
+
 
 h1,
 h2,

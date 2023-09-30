@@ -36,9 +36,14 @@
     align-content: flex-end;
   }
 
+  .user-comments-header {
+    color: var(--offWhite);
+    font-size: 32px;
+  }
+
   .user-comments-container {
     display: flex;
-    background-color: var(--primary);
+    background-color: rgba(0, 0, 0, 0.166);
     border-radius: 0.5rem;
     padding: 1rem;
     display: flex;

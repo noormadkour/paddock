@@ -20,11 +20,11 @@
     width: 370px;
     color: var(--offWhite);
     text-shadow: 0px 0px 2px rgb(0, 0, 0);
-    background-color: var(--primary);
-    border: 1px solid var(--outline);
+    background-color: rgba(40, 40, 40, 0.9);
+    border: 1px solid black;
     border-radius: 0.5rem;
     padding: 5px 20px 20px 20px;
-    box-shadow: 0px 4px 5px black;    border: 1px solid var(--outline);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.438);    
     border-radius: 0.5rem;
     padding: 1rem ;
   }
