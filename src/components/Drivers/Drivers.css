@@ -40,7 +40,7 @@
 
 .driver-detail-container {
   display: flex;
-  width: auto;
+  width: 800px;
   margin: 30px;
   background-color: rgba(245, 245, 245, 0.738);
   border: 1px solid var(--outline);
@@ -85,7 +85,8 @@
 
 .driver-comments-header {
   margin: 0 30px 30px 0px;
-  text-shadow: 0px 0px 5px white;
+  color: whitesmoke;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.538);
 }
 
 .driver-comments-container {
