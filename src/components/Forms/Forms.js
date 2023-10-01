@@ -70,7 +70,7 @@ export const CommentForm = ({ setDriverComments, currentUser, driver }) => {
   return (
     <form className="driver-comment-form" onSubmit={handleSubmit}>
       <div className="fieldset-div">
-        <fieldset>
+        <fieldset className="add-comment-form">
           <h2>Add a comment</h2>
           <label className="category-heading">Category: </label>
           <div className="radio-categories">

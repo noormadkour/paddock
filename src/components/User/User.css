@@ -35,3 +35,101 @@
     justify-content: flex-end;
     align-content: flex-end;
   }
+
+  .user-comments-header {
+    color: var(--offWhite);
+    font-size: 32px;
+  }
+
+  .user-comments-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.166);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 30px;
+    flex-basis: 60%;
+  }
+
+  .user-comments{
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  /* .driver-comment-Praise {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 150px;
+    background-color: rgb(195, 255, 195);
+    box-shadow: 1px 1px 5px black;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem 0 1rem;
+    flex-basis: 30;
+    margin: 0.5rem;
+  }
+  
+  .driver-comment-Criticism {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 150px;
+    background-color: rgb(250, 147, 147);
+    box-shadow: 1px 1px 5px black;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    flex-basis: 30;
+    margin: 0.5rem;
+  }
+  
+  .driver-comment-Prediction {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 150px;
+    background-color: rgb(255, 189, 255);
+    box-shadow: 1px 1px 5px black;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem 0 1rem;
+    flex-basis: 30;
+    margin: 0.5rem;
+  }
+  
+  .driver-comment-Question {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 150px;
+    background-color: rgb(255, 226, 176);
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    padding: 1rem 1rem 0 1rem;
+    flex-basis: 30;
+    margin: 0.5rem;
+  }
+  
+  .driver-comment-Answer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: 150px;
+    background-color: rgb(213, 213, 255);
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    padding: 1rem 1rem 0 1rem;
+    flex-basis: 30;
+    margin: 0.5rem;
+  } */

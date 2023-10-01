@@ -8,14 +8,19 @@ export const ConstructorList = () => {
   const [allConstructors, setAllConstructors] = useState([]);
 
   useEffect(() => {
-    getAllConstructors().then((constructorArray) => setAllConstructors(constructorArray));
+    getAllConstructors().then((constructorArray) =>
+      setAllConstructors(constructorArray)
+    );
   }, []);
 
   return (
     <div className="constructors-container">
       {allConstructors.map((constructorObj) => {
         return (
-          <Link key={constructorObj.constructorId} to={`/constructors/${constructorObj.constructorId}`} >
+          <Link
+            key={constructorObj.constructorId}
+            to={`/constructors/${constructorObj.constructorId}`}
+          >
             <Constructor constructorObj={constructorObj} />
           </Link>
         );

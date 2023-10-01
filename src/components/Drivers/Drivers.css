@@ -1,28 +1,36 @@
+.main-comment-container {
+  display: flex;
+  background-color: none;
+  border-radius: 0.5rem;
+  margin: 20px;
+  padding: 10px 0px 0px 0px;
+}
+
 .drivers-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
-  margin: 3rem;
+  margin: 1.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .drivers-container > * {
-  flex-basis: 25%;
-  margin: 0.5rem;
+  flex-basis: 20%;
+  margin: 20px;
 }
 
 .driver-container {
   display: flex;
   justify-content: space-between;
-  /* margin: 20px; */
   color: var(--offWhite);
+  width: 300px;
   text-shadow: 0px 0px 2px rgb(0, 0, 0);
-  background-color: var(--primary);
-  border: 1px solid var(--outline);
+  background-color: rgba(15, 15, 15, 0.903);
+  border: 1px solid black;
   border-radius: 0.5rem;
   padding: 5px 20px 20px 20px;
-  box-shadow: 0px 4px 5px black;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.209);
 }
 
 .driver-container:hover {
@@ -31,127 +39,75 @@
 }
 
 .driver-detail-container {
-  align-content: center;
-  width: auto;
+  display: flex;
+  width: 800px;
   margin: 30px;
-  background-color: var(--offWhite);
+  background-color: rgba(245, 245, 245, 0.738);
   border: 1px solid var(--outline);
   border-radius: 0.5rem;
   padding: 1rem;
 }
 
+.driver-detail-image {
+  border-radius: 10px;
+  margin: 0.5rem;
+  box-shadow: 2px 2px 5px black;
+}
+
+.driver-detail-stats {
+  margin: 1rem 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .driver-info {
   color: var(--offWhite);
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .driver-detail-info {
   color: var(--secondary);
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.driver-header .driver-comments-header {
+.driver-detail-header {
+  font-weight: bold;
+}
+
+.driver-header {
   font-size: larger;
+  margin-left: 30px;
   font-weight: 700;
   line-height: 3rem;
   color: var(--primary);
 }
 
+.driver-comments-header {
+  margin: 0 30px 30px 0px;
+  color: whitesmoke;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.538);
+}
+
 .driver-comments-container {
-  background-color: var(--primary);
+  display: flex;
+  background-color: none;
   border-radius: 0.5rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 30px;
-}
-
-.driver-comment-1 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(176, 255, 176);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px black;
-  border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
-  margin: 0.5rem;
-}
-
-.driver-comment-4 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(183, 183, 255);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px rgb(0, 0, 0);
-  border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
-  margin: 0.5rem;
-}
-
-.driver-comment-2 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(255, 180, 180);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px black;
-  border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
-  margin: 0.5rem;
-}
-
-.driver-comment-3 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(238, 160, 238);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px black;
-  border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
-  margin: 0.5rem;
-}
-
-.driver-comment-5 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(244, 214, 159);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px rgb(0, 0, 0);
-  border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
-  margin: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 30px;
+  flex-basis: 50%;
 }
 
 .button-div {
   display: flex;
   justify-content: flex-end;
   align-content: flex-end;
+  margin-bottom: 5px;
 }
 
 .edit-button .delete-button {
@@ -166,7 +122,7 @@
 
 .driver-team {
   margin-top: 10px;
-  color: var(--tertiary);
+  color: var(--primary);
 }
 
 .link-style {
@@ -177,6 +133,7 @@
 .driver-photo {
   height: 100px;
   border-radius: 50px;
+  
 }
 
 .driver-comment-author {
@@ -197,22 +154,39 @@
 
 .driver-comment-metadata {
   display: flex;
-
 }
 
+.driver-comment-content {
+  margin: 0 20px 25px 20px;
+  color: var(--offWhite)
+}
+
+.driver-comment-Neutral {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+  background-color: rgba(18, 18, 18, 0.918);
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  /* border: 2px solid green; */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
 .driver-comment-Praise {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(195, 255, 195);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px black;
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+  background-color: rgba(18, 18, 18, 0.918);
+  box-shadow: 0px 0px 10px rgb(3, 249, 3);
+  /* border: 2px solid green; */
   border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
+  padding: 0.5rem;
   margin: 0.5rem;
 }
 
@@ -220,15 +194,14 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(250, 147, 147);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px black;
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+  background-color: rgba(18, 18, 18, 0.918);
+  box-shadow: 0px 0px 10px rgb(249, 38, 38);
+  /* border: 2px solid rgba(158, 0, 0, 0.963); */
   border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
+  padding: 0.5rem;
   margin: 0.5rem;
 }
 
@@ -236,15 +209,14 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(255, 189, 255);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px black;
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+  background-color: rgba(18, 18, 18, 0.918);
+  box-shadow: 0px 0px 10px rgb(255, 0, 255);
+  /* border: 2px solid purple; */
   border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
+  padding: 0.5rem;
   margin: 0.5rem;
 }
 
@@ -252,15 +224,14 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(255, 226, 176);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+  background-color: rgba(18, 18, 18, 0.918);
+  box-shadow: 0px 0px 10px rgb(0, 183, 255);
+  /* border: 2px solid rgba(0, 0, 255, 0.396); */
   border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
+  padding: 0.5rem;
   margin: 0.5rem;
 }
 
@@ -268,22 +239,21 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 40%;
-  height: 150px;
-  background-color: rgb(213, 213, 255);
-  /* border-bottom: 2px solid black;
-  border-left: 2px solid black; */
-  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+  justify-content: space-between;
+  width: 700px;
+  height: auto;
+  background-color: rgba(18, 18, 18, 0.918);
+  box-shadow: 0px 0px 10px yellow;
+  /* border: 2px solid yellow; */
   border-radius: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-  flex-basis: 30;
+  padding: 0.5rem;
   margin: 0.5rem;
 }
 
 .driver-image {
   width: 125px;
   border-radius: 50%;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.268);
 }
 
 .driver-text {

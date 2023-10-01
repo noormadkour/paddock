@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+
+.countdown-main-container {
+  margin: 15rem 15rem 0 15rem;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.433);
+  border-radius: 20px;
+}
+
+.countdown-timer {
+  font-family: "Chakra Petch", sans-serif;
+  font-style: normal;
+}
+
+.countdown-header {
+    font-style: normal;
+    font-size: 32px;
+}
+
+.countdown-container {
+
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-timer{
+  background-color: rgb(2, 84, 2);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.632);
+  text-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+}
+
+.countdown-value {
+  font-size: 50px;
+  width: 60px;
+}
+
+.countdown-unit {
+  font-size: 15px;
+  width: 60px;
+}
+
