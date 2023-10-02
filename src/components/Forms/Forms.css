@@ -64,7 +64,11 @@
 }
 
 .edit-fieldset {
-  background-color: var(--offWhite);
+  background-color: rgba(18, 18, 18, 0.77);
+  color: rgba(205, 205, 205, 0.918);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.314);
 }
 
 .comment-button-div {
