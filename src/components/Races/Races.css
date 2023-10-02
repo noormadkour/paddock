@@ -87,7 +87,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
-    margin: 20px 10px 50px 10px
+    margin: 20px 50px 50px 100px
   }
 
   .race-info {
@@ -98,4 +98,9 @@
     color: whitesmoke;
     font-weight: bold;
     margin: 0px 10px
+  }
+
+  .mini-race-flex-div {
+    display: flex;
+    justify-content: space-between;
   }

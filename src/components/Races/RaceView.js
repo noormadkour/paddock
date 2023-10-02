@@ -42,67 +42,67 @@ export const RaceView = () => {
           />
         </div>
         <div className="race-detail-stats">
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Circuit: </span>
             <span>{race?.Circuit?.circuitName}</span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">First Practice: </span>
             <span>
               {race?.FirstPractice?.date} -{" "}
               {race?.FirstPractice?.time?.slice(0, -1)}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Second Practice: </span>
             <span>
               {race?.SecondPractice?.date} -{" "}
               {race?.SecondPractice?.time?.slice(0, -1)}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Third Practice: </span>
             <span>
               {race?.ThirdPractice?.date} - {(race?.ThirdPractice?.time)?.slice(0, -1)}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Qualifying: </span>
             <span>
               {race?.Qualifying?.date} - {(race?.Qualifying?.time)?.slice(0, -1)}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Grand Prix: </span>
             <span>
               {race?.date} - {(race?.time)?.slice(0, -1)}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Lap Record: </span>
             <span>
               {extraRaceInfo?.fastestLap}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Lap Distance: </span>
             <span>
               {extraRaceInfo?.lapLength}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Year Debuted: </span>
             <span>
               {extraRaceInfo?.firstYearRaced}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Most Recent Winner: </span>
             <span>
               {extraRaceInfo?.lastWinner}
             </span>
           </div>
-          <div>
+          <div className="mini-race-flex-div">
             <span className="race-detail-info">Most Wins (Constructor): </span>
             <span>
               {extraRaceInfo?.constructorWithMostWins}

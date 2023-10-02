@@ -34,16 +34,6 @@
     background-color: rgba(255, 0, 0, 0.348);
   }
   
-  .constructor-detail-container {
-    align-content: center;
-    width: auto;
-    margin: 30px;
-    background-color: var(--offWhite);
-    border: 1px solid var(--outline);
-    border-radius: 0.5rem;
-    padding: 1rem;
-  }
-  
   .constructor-info {
     color: var(--offWhite);
     font-family: "Roboto", sans-serif;
@@ -63,11 +53,6 @@
     width: auto;
     max-height: 75px;
     max-width: 175px;
-  }
-  
-  .constructor-detail-info {
-    color: var(--secondary);
-    font-family: "Roboto", sans-serif;
   }
   
   .constructor-header .constructor-comments-header {
@@ -97,4 +82,51 @@
     padding: 1rem;
     flex-basis: 30;
     margin: 0.5rem;
+  }
+
+  .constructor-detail-container {
+    width: 70%;
+    margin: 30px auto;
+    background-color: rgba(42, 42, 42, 0.582);
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px whitesmoke;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .constructor-detail-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .constructor-detail-data {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .constructor-detail-logo {
+    opacity: 0.8;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    max-width: 50%;
+    max-height: 50%;
+  }
+
+  .constructor-detail-info {
+    font-size: 20px;
+    color: whitesmoke;
+    margin: 10px 20px 10px 10px;
+    font-weight: bold;
+  } 
+
+  .mini-constructor-flex {
+    font-size: 20px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }

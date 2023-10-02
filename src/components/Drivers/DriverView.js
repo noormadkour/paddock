@@ -48,6 +48,8 @@ export const DriverView = ({ currentUser }) => {
           <span className="driver-detail-info">
             {driver.givenName} {driver.familyName}
           </span>
+          <div className="driver-detail-header">DOB: </div>
+          <span className="driver-detail-info">{driver.dateOfBirth}</span>
           <div className="driver-detail-header">Driver Code: </div>
           <span className="driver-detail-info">{driver.code}</span>
           <div className="driver-detail-header">Permanent Number: </div>
@@ -58,6 +60,9 @@ export const DriverView = ({ currentUser }) => {
           <a href={driver.url} className="driver-detail-info">
             {driver.url}
           </a>
+        </div>
+        <div className="driver-detail-stats">
+
         </div>
       </div>
       <div className="main-comment-container">

@@ -41,7 +41,7 @@
 .driver-detail-container {
   display: flex;
   width: 800px;
-  margin: 30px;
+  margin: 30px auto;
   background-color: rgba(245, 245, 245, 0.738);
   border: 1px solid var(--outline);
   border-radius: 0.5rem;
