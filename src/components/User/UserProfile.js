@@ -29,7 +29,7 @@ export const UserProfile = ({ currentUser }) => {
       <div className="user-info-container">
         <div className="user-info">
           <h1>Hey there, {currentUser.fullName}</h1>
-          <p> Here are any comments you've made on drivers</p>
+          <p> Here are any comments you've made</p>
         </div>
       </div>
       <div className="user-comments-container">
