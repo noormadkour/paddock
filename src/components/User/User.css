@@ -11,7 +11,7 @@
 
   .user-info {
     color: var(--offWhite);
-    margin-left: 50px;
+    margin: 50px 0 50px 100px
   }
 
   .driver-comment {

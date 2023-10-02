@@ -52,20 +52,50 @@
   .race-detail-container {
     margin: 100px 20px 20px 20px;
     color: var(--offWhite);
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
-    background-color: var(--primary);
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: rgba(46, 46, 46, 0.672);
     border: 1px solid var(--outline);
     border-radius: 0.5rem;
     padding: 0px 20px 20px 20px;
     box-shadow: 0px 4px 5px black;
   }
+
+  .race-detail-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .race-detail-header-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .race-detail-header {
+    font-size: 40px;
+    margin: 10px 10px 0px 10px;
+  }
   
+  .race-detail-map {
+    max-height: 600px;
+  }
+
+  .race-detail-stats {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 20px 10px 50px 10px
+  }
+
   .race-info {
     color: var(--offWhite);
-    font-family: "Roboto", sans-serif;
   }
   
   .race-detail-info {
-    color: var(--secondary);
-    font-family: "Roboto", sans-serif;
+    color: whitesmoke;
+    font-weight: bold;
+    margin: 0px 10px
   }
