@@ -42,8 +42,9 @@
   display: flex;
   width: 800px;
   margin: 30px auto;
-  background-color: rgba(245, 245, 245, 0.738);
-  border: 1px solid var(--outline);
+  background-color: rgb(16, 16, 16, 0.9);
+  border: 1px solid rgb(26, 26, 26);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.449);
   border-radius: 0.5rem;
   padding: 1rem;
 }
@@ -56,6 +57,7 @@
 
 .driver-detail-stats {
   margin: 1rem 1rem 1rem 2rem;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -67,12 +69,14 @@
 }
 
 .driver-detail-info {
-  color: var(--secondary);
+  color: whitesmoke;
   font-family: "Montserrat", sans-serif;
 }
 
 .driver-detail-header {
   font-weight: bold;
+  color: whitesmoke;
+  font-size: 18px;
 }
 
 .driver-header {
@@ -261,4 +265,9 @@
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.driver-mini-flex {
+  display: flex;
+  justify-content: space-between;
 }

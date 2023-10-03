@@ -23,3 +23,9 @@ export const getDriverImageById = (driverId) => {
   .then((response) => response.json())
   .then((driverObj) => driverObj[0])
 } 
+
+export const getNumberOfWins = (driverId) => {
+  return fetch(`http://ergast.com/api/f1/drivers/${driverId}/results/1.json`)
+  .then((response) => response.json())
+  .then((data) => data.MRData.total)
+}

@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { getDriverById, getDriverImageById } from "../../services/driverService";
+import {
+  getDriverById,
+  getDriverImageById,
+  getNumberOfWins,
+  getTeamByDriverId,
+} from "../../services/driverService";
 import { useNavigate, useParams } from "react-router-dom";
 import { deleteComment, getAllComments } from "../../services/commentService";
 import { CommentForm } from "../Forms";
@@ -7,22 +12,26 @@ import "./Drivers.css";
 
 export const DriverView = ({ currentUser }) => {
   const [driver, setDriver] = useState({});
+  const [wins, setWins] = useState("");
+  const [driversTeam, setDriversTeam] = useState({});
   const [driverComments, setDriverComments] = useState([]);
   const [filteredComments, setFilteredComments] = useState([]);
-  const [ driverPhotoURL, setDriverPhotoURL ] = useState("")
+  const [driverPhotoURL, setDriverPhotoURL] = useState("");
   const { driverId } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     getDriverById(driverId).then((driverObj) => {
-      setDriver(driverObj)
+      setDriver(driverObj);
     });
     getAllComments().then((driverCommentsArray) => {
       setDriverComments(driverCommentsArray);
     });
-    getDriverImageById(driverId).then(driverObj => {
-      setDriverPhotoURL(driverObj.imageUrl)
-    })
+    getDriverImageById(driverId).then((driverObj) => {
+      setDriverPhotoURL(driverObj.imageUrl);
+    });
+    getNumberOfWins(driverId).then((numberWins) => setWins(numberWins));
+    getTeamByDriverId(driverId).then((teamObj) => setDriversTeam(teamObj));
   }, [driverId]);
 
   useEffect(() => {
@@ -41,33 +50,49 @@ export const DriverView = ({ currentUser }) => {
     <>
       <div className="driver-detail-container" key={driver.driverId}>
         <div className="driver-detail-image-container">
-          <img className="driver-detail-image" src={driverPhotoURL} alt={driverId} />
+          <img
+            className="driver-detail-image"
+            src={driverPhotoURL}
+            alt={driverId}
+          />
         </div>
         <div className="driver-detail-stats">
-          <div className="driver-detail-header">Name: </div>
-          <span className="driver-detail-info">
-            {driver.givenName} {driver.familyName}
-          </span>
-          <div className="driver-detail-header">DOB: </div>
-          <span className="driver-detail-info">{driver.dateOfBirth}</span>
-          <div className="driver-detail-header">Driver Code: </div>
-          <span className="driver-detail-info">{driver.code}</span>
-          <div className="driver-detail-header">Permanent Number: </div>
-          <span className="driver-detail-info">{driver.permanentNumber}</span>
-          <div className="driver-detail-header">Nationality: </div>
-          <span className="driver-detail-info">{driver.nationality}</span>
-          <div className="driver-detail-header">Wiki Page: </div>
-          <a href={driver.url} className="driver-detail-info">
-            {driver.url}
-          </a>
-        </div>
-        <div className="driver-detail-stats">
-
+          <div className="driver-mini-flex">
+            <div className="driver-detail-header">Name: </div>
+            <span className="driver-detail-info">
+              {driver.givenName} {driver.familyName}
+            </span>
+          </div>
+          <div className="driver-mini-flex">
+            <div className="driver-detail-header">Drives For: </div>
+            <span className="driver-detail-info">{driversTeam.name}</span>
+          </div>
+          <div className="driver-mini-flex">
+            <div className="driver-detail-header">DOB: </div>
+            <span className="driver-detail-info">{driver.dateOfBirth}</span>
+          </div>
+          <div className="driver-mini-flex">
+            <div className="driver-detail-header">Driver Code: </div>
+            <span className="driver-detail-info">{driver.code}</span>
+          </div>
+          <div className="driver-mini-flex">
+            <div className="driver-detail-header">Permanent Number: </div>
+            <span className="driver-detail-info">{driver.permanentNumber}</span>
+          </div>
+          <div className="driver-mini-flex">
+            <div className="driver-detail-header">Nationality: </div>
+            <span className="driver-detail-info">{driver.nationality}</span>
+          </div>
+          <div className="driver-mini-flex">
+            <div className="driver-detail-header">
+              Number of Grand Prix wins:
+            </div>
+            <span className="driver-detail-info">{wins}</span>
+          </div>
         </div>
       </div>
       <div className="main-comment-container">
-        <div>
-        </div>
+        <div></div>
         <div className="driver-comments-container">
           <h2 className="driver-comments-header">Comments: </h2>
           {filteredComments.map((comment) => {
@@ -109,12 +134,12 @@ export const DriverView = ({ currentUser }) => {
             );
           })}
         </div>
-      <CommentForm
-        setDriverComments={setDriverComments}
-        currentUser={currentUser}
-        driverComments={driverComments}
-        driver={driver}
-      />
+        <CommentForm
+          setDriverComments={setDriverComments}
+          currentUser={currentUser}
+          driverComments={driverComments}
+          driver={driver}
+        />
       </div>
     </>
   );

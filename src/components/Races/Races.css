@@ -25,12 +25,13 @@
     border: 1px solid black;
     border-radius: 0.5rem;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.305);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.214);
   }
 
   .race-container:hover {
     transform: scale(1.05);
     background-color: rgba(255, 0, 0, 0.348);
+    box-shadow: 0px 0px 20px black;
   }
   
 .race-text-div {
