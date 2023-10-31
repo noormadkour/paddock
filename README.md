@@ -7,6 +7,7 @@ The Paddock is simple App that displays all the Races, Constructors, and Drivers
 ## Wireframe & ERD
 
 https://miro.com/app/board/uXjVMmGykJA=/?moveToWidget=3458764563640490649&cot=14
+
 https://dbdiagram.io/d/The-Paddock-ERD-64ff1dc502bd1c4a5e596184
 
 ## Description of the user types
