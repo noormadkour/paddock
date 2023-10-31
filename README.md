@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# The Paddock
+Please note that the names Paddock and The Paddock may be used interchangably
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Know-How is an organization curating events and classes for outdoors lovers and the outdoors curious. The website curates experiences designed to connect participants back to nature and build community through a shared love of the outdoors. This application merges the healing power of nature with education. Know-How offers weekly workshops and activities to anyone interested in the outdoors, regardless of experience. For those who may want to start a new outdoor hobby but aren’t sure how, Know-How provides an inclusive environment for learning and adventuring.
 
-## Available Scripts
+## Wireframe & ERD
 
-In the project directory, you can run:
+https://miro.com/app/board/uXjVMmGykJA=/?moveToWidget=3458764563640490649&cot=14
+https://dbdiagram.io/d/The-Paddock-ERD-64ff1dc502bd1c4a5e596184
 
-### `npm start`
+## Description of the user types
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Each User of the application will gain additionaly functionality on comment they have made on the Drivers. Namely, they will be able to edit or delete only comments they have made, and can find all the comments they've made site-wide on their profile page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## List of Features
+- User specific comment options based on validation
+- CRUD capabilities
+- Next Race Countdown timer that shows the days, hours, minutes and seconds until the start of the next race. Built by yours truly
+- Conditional styling whereby the self-categorized user comments have a differnt shadow color depending on their category
+  
+## Screenshots of Project
