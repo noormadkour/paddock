@@ -10,7 +10,7 @@ https://miro.com/app/board/uXjVMmGykJA=/?moveToWidget=3458764563640490649&cot=14
 
 https://dbdiagram.io/d/The-Paddock-ERD-64ff1dc502bd1c4a5e596184
 
-## Description of the user types
+## Description of the User capabilities
 
 Each User of the application will gain additionaly functionality on comment they have made on the Drivers. Namely, they will be able to edit or delete only comments they have made, and can find all the comments they've made site-wide on their profile page.
 
